@@ -106,7 +106,9 @@ header h1 {
 }
 
 .hero-content{
-  height: 100%;
+  border-radius: 20px;
+  height: 50%;
+  width: 90%;
   background-color: var(--color-primary-alfa);
   backdrop-filter: blur(3px);
 }
@@ -146,20 +148,106 @@ footer{
 /* Clases para todos los colores personalizados */
 .bg-primary { background-color: var(--color-primary) !important; }
 .text-primary { color: var(--color-primary) !important; }
-.btn-primary { background-color: var(--color-primary) !important; border-color: var(--color-primary) !important; }
 
 .bg-secondary { background-color: var(--color-secondary) !important; }
 .text-secondary { color: var(--color-secondary) !important; }
-.btn-secondary { background-color: var(--color-secondary) !important; border-color: var(--color-secondary) !important; }
 
 .bg-success { background-color: var(--color-accent) !important; }
 .text-success { color: var(--color-accent) !important; }
-.btn-success { background-color: var(--color-accent) !important; border-color: var(--color-accent) !important; }
+
 
 .bg-light { background-color: var(--color-light) !important; }
 .text-light { color: var(--color-light) !important; }
-.btn-light { background-color: var(--color-light) !important; border-color: var(--color-light) !important; }
 
 .bg-dark { background-color: var(--color-text) !important; }
 .text-dark { color: var(--color-text) !important; }
-.btn-dark { background-color: var(--color-text) !important; border-color: var(--color-text) !important; }
+
+/* =======================
+   Botones personalizados
+   ======================= */
+
+/* BTN PRIMARY */
+.btn-primary {
+  background-color: var(--color-primary) !important;
+  border-color: var(--color-primary) !important;
+  color: var(--color-light) !important; /* texto blanco o claro sobre fondo oscuro */
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active,
+.btn-primary.active,
+.btn-primary.dropdown-toggle.show {
+  background-color: var(--color-primary-alfa) !important; /* fondo con transparencia para hover */
+  border-color: var(--color-primary) !important;
+  color: var(--color-light) !important;
+}
+
+/* BTN SECONDARY */
+.btn-secondary {
+  background-color: var(--color-secondary) !important;
+  border-color: var(--color-secondary) !important;
+  color: var(--color-light) !important; /* texto blanco sobre dorado */
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus,
+.btn-secondary:active,
+.btn-secondary.active,
+.btn-secondary.dropdown-toggle.show {
+  background-color: #b38f44 !important; /* dorado más oscuro para hover */
+  border-color: var(--color-secondary) !important;
+  color: var(--color-light) !important;
+}
+
+/* BTN SUCCESS / ACCENT */
+.btn-success {
+  background-color: var(--color-accent) !important;
+  border-color: var(--color-accent) !important;
+  color: var(--color-light) !important;
+}
+
+.btn-success:hover,
+.btn-success:focus,
+.btn-success:active,
+.btn-success.active,
+.btn-success.dropdown-toggle.show {
+  background-color: #6f826f !important; /* un tono más oscuro para hover */
+  border-color: var(--color-accent) !important;
+  color: var(--color-light) !important;
+}
+
+/* BTN LIGHT */
+.btn-light {
+  background-color: var(--color-light) !important;
+  border-color: var(--color-light) !important;
+  color: var(--color-text) !important;
+}
+
+.btn-light:hover,
+.btn-light:focus,
+.btn-light:active,
+.btn-light.active,
+.btn-light.dropdown-toggle.show {
+  background-color: #e0ded9 !important; /* ligeramente más oscuro para hover */
+  border-color: var(--color-light) !important;
+  color: var(--color-text) !important;
+}
+
+/* BTN DARK / TEXT */
+.btn-dark {
+  background-color: var(--color-text) !important;
+  border-color: var(--color-text) !important;
+  color: var(--color-light) !important;
+}
+
+.btn-dark:hover,
+.btn-dark:focus,
+.btn-dark:active,
+.btn-dark.active,
+.btn-dark.dropdown-toggle.show {
+  background-color: #262626 !important; /* un tono más oscuro para hover */
+  border-color: var(--color-text) !important;
+  color: var(--color-light) !important;
+}
+
