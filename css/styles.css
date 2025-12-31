@@ -1,0 +1,117 @@
+:root {
+  --color-bg: #e6d8c3;
+  --color-primary: #1f3a4a;
+  --color-secondary: #c9a24d;
+  --color-accent: #7a8f7a;
+  --color-light: #f2f1ef;
+  --color-text: #333333;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+/* ---BARRA BLANCA SUPERIOR ----*/
+.utility-bar {
+  background-color: var(--color-light);
+  font-size: x-small;
+}
+
+/* ---------HEADER-- */
+header {
+  background-color: var(--color-primary);
+  color: var(--color-light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+}
+/*BOTON DE NAVEGACION */
+.menu-toggle {
+  font-size: 2rem;
+  background-color: var(--color-primary);
+  border-color: transparent;
+  color: var(--color-light);
+}
+
+/*ESTILOS DEL MENU DE NAVEGACION*/
+nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+nav a {
+  color: var(--color-light);
+  text-decoration: none;
+}
+nav a:hover {
+  color: var(--color-secondary);
+}
+
+.nav-desktop{
+  display: none;
+}
+.nav-movil{
+  position: absolute; /* busca un contenedor padre que sea diferente de sticky */
+  top: 100%; /* me posiciono al final de la altura (100%) del contenedor padre escogico por position */
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 100%);
+  background-color: var(--color-primary);
+
+  /* Inicia Cerrado */
+  transform: translateX(100%); /* lo mando a la derecha del todo */
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.4s ease, opacity 0.3s ease;
+}
+/*que hace cuando se le añade la clase .active POR JScript*/
+.nav-movil.active {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.nav-movil ul{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+
+
+/*TITULO Y LOGO*/
+.logo {
+  height: 40px;
+  width: 40px;
+}
+
+header h1 {
+  text-wrap: nowrap;
+}
+
+
+/* Estilos base: móviles (por defecto) */
+
+/* Teléfonos grandes */
+@media (min-width: 576px) {
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+}
+
+/* Escritorios */
+@media (min-width: 992px) {
+  .menu-toggle { 
+    display: none;  /*ocultamos el toggle de navegacion*/
+  }
+  .nav-desktop{
+    display: flex;
+  }
+
+}
+
+/* Pantallas grandes */
+@media (min-width: 1200px) {
+}
