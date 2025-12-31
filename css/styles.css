@@ -30,6 +30,18 @@ header {
   top: 0;
   z-index: 1000;
 }
+
+/*TITULO Y LOGO*/
+.logo {
+  height: 40px;
+  width: 40px;
+}
+
+header h1 {
+  text-wrap: nowrap;
+}
+
+
 /*BOTON DE NAVEGACION */
 .menu-toggle {
   font-size: 2rem;
@@ -44,12 +56,32 @@ nav ul {
   margin: 0;
   list-style: none;
 }
+
 nav a {
   color: var(--color-light);
   text-decoration: none;
+  position: relative; /* necesario para pseudo-elemento */
+  padding-bottom: 5px; /* espacio para la línea */
 }
+
 nav a:hover {
   color: var(--color-secondary);
+}
+
+nav a.active::after { /* linea de pestaña activa, after hace que se inserte despues del elemento indicado*/
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px; 
+  width: 100%;
+  background-color: var(--color-light); /* color de la línea */
+  border-radius: 2px;
+}
+
+nav a.active:hover:after { /* linea de pestaña activa, after hace que se inserte despues del elemento indicado*/
+  background-color: var(--color-secondary); /* color de la línea */
+
 }
 
 .nav-desktop{
@@ -83,16 +115,6 @@ nav a:hover {
 }
 
 
-/*TITULO Y LOGO*/
-.logo {
-  height: 40px;
-  width: 40px;
-}
-
-header h1 {
-  text-wrap: nowrap;
-}
-
 
 /* -----------------HERO----------------- */
 
@@ -113,9 +135,32 @@ header h1 {
   backdrop-filter: blur(3px);
 }
 
+/* Footer */
+footer a {
+  color: var(--color-light);
+  text-decoration: none;
+  position: relative; /* necesario para pseudo-elemento */
+  padding-bottom: 5px; /* espacio para la línea */
+}
 
-footer{
-  margin-top: auto;
+footer a:hover {
+  color: var(--color-secondary);
+}
+
+footer a.active::after { /* linea de pestaña activa, after hace que se inserte despues del elemento indicado*/
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px; 
+  width: 100%;
+  background-color: var(--color-light); /* color de la línea */
+  border-radius: 2px;
+}
+
+footer a.active:hover:after { /* linea de pestaña activa, after hace que se inserte despues del elemento indicado*/
+  background-color: var(--color-secondary); /* color de la línea */
+
 }
 
 /* Estilos base: móviles (por defecto) */
