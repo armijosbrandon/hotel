@@ -30,164 +30,21 @@
   </head>
 
   <body>
-    <!-- --------------Barra blanca superior ------->
-    <section class="utility-bar py-2 px-2 px-lg-5 d-flex justify-content-end gap-3">
-      <!-- Información de contacto -->
-      <div class="contact-info d-flex flex-wrap align-items-center gap-3">
-        <span class="text-dark"
-          ><i class="fa-solid fa-phone me-1"></i> +34 600 000 000</span
-        >
-        <span class="text-dark"
-          ><i class="fa-solid fa-envelope me-1"></i>
-          contacto@aurorahotel.com</span
-        >
-      </div>
-      
-      <button class="btn-danger" aria-label="Iniciar Sesión">
-        Iniciar Sesión<i class="fa-solid fa-arrow-right-to-bracket"></i>
-      </button>
-      <button class="btn-danger" aria-label="Registrarse">
-        Registrarse <i class="fa-solid fa-user"></i>
-      </button>
-    </section>
-
-    <!-- ---------------------HEADER -------------->
-    <header class="px-3 px-lg-5 py-2">
-      <!-- --------TITULO E ICONO------->
-      <div class="d-flex align-items-center gap-2">
-        <img src="img/logo.png" class="logo" alt="Logo del hotel" />
-        <h1>Aurora Hotel</h1>
-      </div>
-
-      <!-- -----NAVEGACION -------------->
-      <!-- Navegacion en desktop y grandes -->
-      <nav class="nav-desktop">
-        <ul class="gap-5 px-0 m-0 d-flex">
-          <li><a href="index.html" class="active">Inicio</a></li>
-          <li><a href="Servicios.html">Instalaciones y Servicios </a></li>
-          <li><a href="MisReservas.html">Mis Reservas</a></li>
-          <li><a href="Contacto.html">Dirección y Contacto</a></li>
-        </ul>
-      </nav>
-
-      <!-- Navegacion en Movil-->
-      <!-- Botón hamburguesa -->
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir Menu">
-        ☰
-      </button>
-
-      <nav id="navMenu" class="nav-movil">
-        <ul class="gap-3 px-3">
-          <li><a href="index.html" class="active">Inicio</a></li>
-          <li><a href="Servicios.html">Instalaciones y Servicios </a></li>
-          <li><a href="MisReservas.html">Mis Reservas</a></li>
-          <li><a href="Contacto.html">Dirección y Contacto</a></li>
-        </ul>
-      </nav>
-    </header>
-
-    <!-- ---------------------HERO -------------->
-    <section class="hero d-flex align-items-center justify-content-center">
-      <div
-        class="hero-content text-center d-flex flex-column align-items-center justify-content-center py-5 py-lg-6"
-      >
-        <h1 class="h1 text-light text-center display-lg-1 text-light">
-          Aurora Hotel
-        </h1>
-        <p class="text-light fs-5 fs-lg-4">
-          Tu refugio ideal, donde cada estancia se siente como en casa.
-        </p>
-        <a class="btn btn-primary btn-lg mt-3" aria-label="Reservar Habitación" href="ReservarForm.html">Reserva Ahora</a>
-      </div>
-    </section>
+    
+    <!-- ---------------------BARRA DE INFORMACION-HEADER-HERO -------------->
+    <div id="info-header-hero"></div> <!-- se cargara automaticamente con jvscript -->
 
     <main>
       <h1>Inicio</h1>
       <p></p>
     </main>
 
-    <footer class="footer container-fluid bg-primary text-light py-3 py-lg-4">
-      <div class="row">
-        <div class="col-md-12">
-          <div class="row gap-lg-0 gap-4">
-            <!-- MARCA PERSONAL -->
-            <div class="col-md-3 text-center text-md-start">
-              <h3>Aurora Hotel</h3>
-              <p class="small pe-lg-5">
-                Hotel moderno con servicios de lujo para una experiencia
-                inolvidable.
-              </p>
-              <p class="small pe-lg-5">
-                Disfruta de habitaciones elegantes, gastronomía gourmet y
-                atención personalizada durante toda tu estancia.
-              </p>
-            </div>
-
-            <!-- NAVEGACION DE FOOTER -->
-            <div class="col-md-3">
-              <h4>Navega</h4>
-              <ul class="nav flex-column">
-                <li class="nav-item">
-                  <a href="index.html" class="active nav-link text-light"> Inicio</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-light" href="Servicios.html"
-                    >Instalaciones y Servicios
-                  </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-light" href="MisReservas.html">Mis Reservas</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link text-light" href="Contacto.html"
-                    >Dirección y Contacto</a
-                  >
-                </li>
-              </ul>
-            </div>
-
-            <!-- DIRECCION -->
-            <div class="col-md-3">
-              <h4>Contacto</h4>
-              <p><i class="fa-solid fa-location-dot me-2"></i> Ciudad, País</p>
-              <p><i class="fa-solid fa-phone me-2"></i> +34 600 000 000</p>
-              <p>
-                <i class="fa-solid fa-envelope me-2"></i>
-                contacto@aurorahotel.com
-              </p>
-            </div>
-
-            <!-- REDES SOCIALES -->
-            <div class="col-md-3">
-              <h4>Síguenos</h4>
-              <div class="social-icons">
-                <a href="#"
-                  ><i class="fa-brands fa-facebook-f text-light me-2"></i
-                ></a>
-                <a href="#"
-                  ><i class="fa-brands fa-instagram text-light me-2"></i
-                ></a>
-                <a href="#"
-                  ><i class="fa-brands fa-whatsapp text-light me-2"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-
-          <div class="row">
-            <div class="col-md-12 text-center mt-4">
-              <p class="small">
-                © 2025 Aurora Hotel. Todos los derechos reservados.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+    <div id="footer"></div>
 
     <!-- SCRIPT Bootstrap  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- SCRIPT PERSONAL-->
+     <script src="script/plantilla.js"></script>
     <script src="script/app.js"></script>
   </body>
 </html>
