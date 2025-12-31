@@ -5,6 +5,11 @@
   --color-accent: #7a8f7a;
   --color-light: #f2f1ef;
   --color-text: #333333;
+  --bs-primary: var(--color-primary) !important;
+  --bs-secondary: var(--color-secondary);
+  --bs-success: var(--color-accent);
+  --bs-light: var(--color-light);
+  --bs-dark: var(--color-text);
 }
 * {
   box-sizing: border-box;
