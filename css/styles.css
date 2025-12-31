@@ -5,12 +5,8 @@
   --color-accent: #7a8f7a;
   --color-light: #f2f1ef;
   --color-text: #333333;
-  --bs-primary: var(--color-primary) !important;
-  --bs-secondary: var(--color-secondary);
-  --bs-success: var(--color-accent);
-  --bs-light: var(--color-light);
-  --bs-dark: var(--color-text);
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -120,3 +116,25 @@ header h1 {
 /* Pantallas grandes */
 @media (min-width: 1200px) {
 }
+
+
+/* Clases para todos los colores personalizados */
+.bg-primary { background-color: var(--color-primary) !important; }
+.text-primary { color: var(--color-primary) !important; }
+.btn-primary { background-color: var(--color-primary) !important; border-color: var(--color-primary) !important; }
+
+.bg-secondary { background-color: var(--color-secondary) !important; }
+.text-secondary { color: var(--color-secondary) !important; }
+.btn-secondary { background-color: var(--color-secondary) !important; border-color: var(--color-secondary) !important; }
+
+.bg-success { background-color: var(--color-accent) !important; }
+.text-success { color: var(--color-accent) !important; }
+.btn-success { background-color: var(--color-accent) !important; border-color: var(--color-accent) !important; }
+
+.bg-light { background-color: var(--color-light) !important; }
+.text-light { color: var(--color-light) !important; }
+.btn-light { background-color: var(--color-light) !important; border-color: var(--color-light) !important; }
+
+.bg-dark { background-color: var(--color-text) !important; }
+.text-dark { color: var(--color-text) !important; }
+.btn-dark { background-color: var(--color-text) !important; border-color: var(--color-text) !important; }
