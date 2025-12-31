@@ -8,4 +8,6 @@ menuToggle.addEventListener("click", () => {
 
   // Cambiar icono
   menuToggle.textContent = isOpen ? "✕" : "☰";
+  
+  document.body.classList.toggle("menu-open", isOpen);
 });

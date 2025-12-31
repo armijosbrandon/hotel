@@ -13,11 +13,26 @@
   margin: 0;
   padding: 0;
 }
+
+html, body {
+  height: 100%; /*hacer que ocupen todo el ancho de la pantalla*/
+  margin: 0;
+  padding: 0;
+}
+
+body.menu-open {
+  overflow: hidden; /*bloqueo el scroll vertical si se activa este estado*/
+  position: fixed;/*bloquea en la pantalla*/
+  width: 100%;
+}
+
 /* ---BARRA BLANCA SUPERIOR ----*/
 .utility-bar {
   background-color: var(--color-light);
   font-size: x-small;
 }
+
+
 
 /* ---------HEADER-- */
 header {
@@ -92,7 +107,7 @@ nav a.active:hover:after { /* linea de pestaña activa, after hace que se insert
   top: 100%; /* me posiciono al final de la altura (100%) del contenedor padre escogico por position */
   left: 0;
   width: 100%;
-  height: calc(100vh - 100%);
+  height: 100dvh;
   background-color: var(--color-primary);
 
   /* Inicia Cerrado */
@@ -106,6 +121,7 @@ nav a.active:hover:after { /* linea de pestaña activa, after hace que se insert
   transform: translateX(0);
   opacity: 1;
   pointer-events: auto;
+
 }
 
 .nav-movil ul{
