@@ -1,6 +1,7 @@
 :root {
   --color-bg: #e6d8c3;
   --color-primary: #1f3a4a;
+  --color-primary-alfa: #1f3a4a60;
   --color-secondary: #c9a24d;
   --color-accent: #7a8f7a;
   --color-light: #f2f1ef;
@@ -27,6 +28,7 @@ header {
   align-items: center;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 /*BOTON DE NAVEGACION */
 .menu-toggle {
@@ -92,6 +94,28 @@ header h1 {
 }
 
 
+/* -----------------HERO----------------- */
+
+.hero{
+  background-image: url("../img/hero.png");
+  background-size: cover;
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  
+}
+
+.hero-content{
+  height: 100%;
+  background-color: var(--color-primary-alfa);
+  backdrop-filter: blur(3px);
+}
+
+
+footer{
+  margin-top: auto;
+}
+
 /* Estilos base: móviles (por defecto) */
 
 /* Teléfonos grandes */
@@ -116,6 +140,7 @@ header h1 {
 /* Pantallas grandes */
 @media (min-width: 1200px) {
 }
+
 
 
 /* Clases para todos los colores personalizados */
