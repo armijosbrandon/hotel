@@ -1,9 +1,21 @@
+
+/* ------------VARIABLES DE COLOR -----------*/
 :root {
-  --color-bg: #e6d8c3;
+  /* Base */
+  --color-bg: #F2F1EF;
+
+  /* Marca */
   --color-primary: #1f3a4a;
   --color-primary-alfa: #1f3a4a60;
-  --color-secondary: #c9a24d;
+
+  /* Premium / Acentos */
+  --color-secondary: #C9A24D; /* Dorado suave */
   --color-accent: #7a8f7a;
+
+  /* Fondos */
+  --color-beige: #E6D8C3; /* Beige arena */
+
+  /* Neutros */
   --color-light: #f2f1ef;
   --color-text: #333333;
 }
@@ -18,6 +30,9 @@ html, body {
   height: 100%; /*hacer que ocupen todo el ancho de la pantalla*/
   margin: 0;
   padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: var(--color-bg);
+  color: var(--color-text);
 }
 
 body.menu-open {
@@ -80,7 +95,7 @@ nav a {
 }
 
 nav a:hover {
-  color: var(--color-secondary);
+  color: var(--color-accent);
 }
 
 nav a.active::after { /* linea de pestaña activa, after hace que se inserte despues del elemento indicado*/
@@ -90,12 +105,12 @@ nav a.active::after { /* linea de pestaña activa, after hace que se inserte des
   bottom: 0;
   height: 3px; 
   width: 100%;
-  background-color: var(--color-light); /* color de la línea */
+  background-color: var(--color-accent); /* color de la línea */
   border-radius: 2px;
 }
 
 nav a.active:hover:after { /* linea de pestaña activa, after hace que se inserte despues del elemento indicado*/
-  background-color: var(--color-secondary); /* color de la línea */
+  background-color: var(--color-accent); /* color de la línea */
 
 }
 
@@ -170,12 +185,12 @@ footer a.active::after { /* linea de pestaña activa, after hace que se inserte 
   bottom: 0;
   height: 3px; 
   width: 100%;
-  background-color: var(--color-light); /* color de la línea */
+  background-color: var(--color-accent); /* color de la línea */
   border-radius: 2px;
 }
 
-footer a.active:hover:after { /* linea de pestaña activa, after hace que se inserte despues del elemento indicado*/
-  background-color: var(--color-secondary); /* color de la línea */
+footer a:hover { /* linea de pestaña activa, after hace que se inserte despues del elemento indicado*/
+  background-color: var(--color-accent); /* color de la línea */
 
 }
 
@@ -205,33 +220,48 @@ footer a.active:hover:after { /* linea de pestaña activa, after hace que se ins
 }
 
 
-
-/* Clases para todos los colores personalizados */
+/* -------------BOOTSTRAP PERSONALIZADO */
+/* =======================
+   BACKGROUNDS
+   ======================= */
 .bg-primary { background-color: var(--color-primary) !important; }
-.text-primary { color: var(--color-primary) !important; }
-
 .bg-secondary { background-color: var(--color-secondary) !important; }
-.text-secondary { color: var(--color-secondary) !important; }
-
 .bg-success { background-color: var(--color-accent) !important; }
-.text-success { color: var(--color-accent) !important; }
-
-
 .bg-light { background-color: var(--color-light) !important; }
-.text-light { color: var(--color-light) !important; }
-
 .bg-dark { background-color: var(--color-text) !important; }
-.text-dark { color: var(--color-text) !important; }
+.bg-beige { background-color: var(--color-beige) !important; }
 
 /* =======================
-   Botones personalizados
+   TEXT COLORS
+   ======================= */
+.text-primary { color: var(--color-primary) !important; }
+.text-secondary { color: var(--color-secondary) !important; }
+.text-success { color: var(--color-accent) !important; }
+.text-light { color: var(--color-light) !important; }
+.text-dark { color: var(--color-text) !important; }
+
+/* NUEVO */
+.text-beige { color: var(--color-beige) !important; }
+
+/* =======================
+   BORDERS
+   ======================= */
+.border-primary { border-color: var(--color-primary) !important; }
+.border-secondary { border-color: var(--color-secondary) !important; }
+.border-success { border-color: var(--color-accent) !important; }
+.border-light { border-color: var(--color-light) !important; }
+.border-dark { border-color: var(--color-text) !important; }
+.border-beige { border-color: var(--color-beige) !important; }
+
+/* =======================
+   BOTONES PERSONALIZADOS
    ======================= */
 
-/* BTN PRIMARY */
+/* PRIMARY */
 .btn-primary {
   background-color: var(--color-primary) !important;
   border-color: var(--color-primary) !important;
-  color: var(--color-light) !important; /* texto blanco o claro sobre fondo oscuro */
+  color: var(--color-light) !important;
 }
 
 .btn-primary:hover,
@@ -239,16 +269,16 @@ footer a.active:hover:after { /* linea de pestaña activa, after hace que se ins
 .btn-primary:active,
 .btn-primary.active,
 .btn-primary.dropdown-toggle.show {
-  background-color: var(--color-primary-alfa) !important; /* fondo con transparencia para hover */
+  background-color: var(--color-primary-alfa) !important;
   border-color: var(--color-primary) !important;
   color: var(--color-light) !important;
 }
 
-/* BTN SECONDARY */
+/* SECONDARY – Dorado premium */
 .btn-secondary {
   background-color: var(--color-secondary) !important;
   border-color: var(--color-secondary) !important;
-  color: var(--color-light) !important; /* texto blanco sobre dorado */
+  color: var(--color-light) !important;
 }
 
 .btn-secondary:hover,
@@ -256,12 +286,12 @@ footer a.active:hover:after { /* linea de pestaña activa, after hace que se ins
 .btn-secondary:active,
 .btn-secondary.active,
 .btn-secondary.dropdown-toggle.show {
-  background-color: #b38f44 !important; /* dorado más oscuro para hover */
+  background-color: #b38f44 !important;
   border-color: var(--color-secondary) !important;
   color: var(--color-light) !important;
 }
 
-/* BTN SUCCESS / ACCENT */
+/* SUCCESS / ACCENT */
 .btn-success {
   background-color: var(--color-accent) !important;
   border-color: var(--color-accent) !important;
@@ -273,12 +303,12 @@ footer a.active:hover:after { /* linea de pestaña activa, after hace que se ins
 .btn-success:active,
 .btn-success.active,
 .btn-success.dropdown-toggle.show {
-  background-color: #6f826f !important; /* un tono más oscuro para hover */
+  background-color: #6f826f !important;
   border-color: var(--color-accent) !important;
   color: var(--color-light) !important;
 }
 
-/* BTN LIGHT */
+/* LIGHT */
 .btn-light {
   background-color: var(--color-light) !important;
   border-color: var(--color-light) !important;
@@ -290,12 +320,12 @@ footer a.active:hover:after { /* linea de pestaña activa, after hace que se ins
 .btn-light:active,
 .btn-light.active,
 .btn-light.dropdown-toggle.show {
-  background-color: #e0ded9 !important; /* ligeramente más oscuro para hover */
+  background-color: #e0ded9 !important;
   border-color: var(--color-light) !important;
   color: var(--color-text) !important;
 }
 
-/* BTN DARK / TEXT */
+/* DARK */
 .btn-dark {
   background-color: var(--color-text) !important;
   border-color: var(--color-text) !important;
@@ -307,8 +337,24 @@ footer a.active:hover:after { /* linea de pestaña activa, after hace que se ins
 .btn-dark:active,
 .btn-dark.active,
 .btn-dark.dropdown-toggle.show {
-  background-color: #262626 !important; /* un tono más oscuro para hover */
+  background-color: #262626 !important;
   border-color: var(--color-text) !important;
   color: var(--color-light) !important;
 }
 
+/* =======================
+   BOTÓN ESPECIAL BEIGE
+   (útil para secciones)
+   ======================= */
+.btn-beige {
+  background-color: var(--color-beige) !important;
+  border-color: var(--color-beige) !important;
+  color: var(--color-primary) !important;
+}
+
+.btn-beige:hover,
+.btn-beige:focus {
+  background-color: #d8cbb2 !important;
+  border-color: var(--color-beige) !important;
+  color: var(--color-primary) !important;
+}
