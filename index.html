@@ -12,12 +12,10 @@
     />
     <!-- ---------ESTILOS------ -->
     <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <!-- PERSONALES -->
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/inicio.css" />
     <!--librerias-->
     <link
       rel="stylesheet"
@@ -30,13 +28,261 @@
   </head>
 
   <body>
-    
     <!-- ---------------------BARRA DE INFORMACION-HEADER-HERO -------------->
-    <div id="info-header-hero"></div> <!-- se cargara automaticamente con jvscript -->
+    <div id="info-header-hero"></div>
+    <!-- se cargara automaticamente con jvscript -->
 
     <main>
-      <h1>Inicio</h1>
-      <p></p>
+      <!----------------------- INFORMACION BASICA DEL HOTEL --------------->
+      <section class="container-fluid">
+        <div class="container p-2 p-md-5">
+          <div class="row">
+            <!-- TARGETA DE DESCRIPCION BREVE TEXTUAL DEL HOTEL -->
+            <div class="col-lg-8 mb-4 mb-lg-0">
+              <!-- NOMBRE DEL HOTEL -->
+              <h2 class="h2 fw-semibold lh-sm text-primary m-3 fs-1 text-uppercase">Aurora Hotel</h2>
+              <div class="card mb-3 bg-body shadow-sm border-secondary-subtle">
+                <div class="row g-1">
+                  <!-- Imagen targeta -->
+                  <div class="col-md-4">
+                    <div class="h-100 overflow-hidden rounded-start">
+                      <!-- h-100 hace que ocupe todo el alto, hidden oculta partes de la imagen que no se muestran  y rounded star da bordes al inicio-->
+                      <img src="img/hotel.png" loading="lazy" class="w-100 h-100 object-fit-cover" alt="Imagen del hotel Aurora" />
+                      <!-- object-fit-cover permite que la imagen cubra todo el contenedor sin distorsionarse -->
+                    </div>
+                  </div>
+                  <!-- informacion -->
+                  <div class="col-md-8">
+                    <div class="card-body">
+                      <h3 class="card-title text-primary mb-2 fs-4 fs-md-3">Hotel 4 Estrellas Superior</h3>
+                      <h4 class="card-subtitle text-success mb-3 fs-6 fs-md-4">
+                        Tu refugio ideal, donde cada estancia se siente como en casa.
+                      </h4>
+                      <p class="card-text text">
+                        Aurora Hotel es un hotel urbano de categoría superior, diseñado para ofrecer una experiencia de descanso elegante,
+                        cómoda y eficiente. Combina diseño moderno, atención personalizada y un sistema de reservaciones ágil para viajeros
+                        de negocios, familias y parejas.
+                      </p>
+                      <p class="card-text">
+                        <small class="text-muted">Last updated 3 mins ago</small>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- LISTA DE DATOS GENERALES -->
+            <div class="col-lg-4">
+              <h2 class="h2 fw-semibold lh-sm text-primary m-3 fs-4 text-uppercase">Datos Generales</h2>
+              <div class="list-group shadow-sm border-secondary-subtle">
+                <!-- item 1 -->
+                <div class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">
+                      <i class="fa-solid fa-building me-2 text-secondary"></i>
+                      Número total de habitaciones
+                    </h5>
+                  </div>
+                  <p class="mb-1">96 habitaciones</p>
+                  <small>Incluye habitaciones estándar, familiares y suites.</small>
+                </div>
+
+                <!-- item 2 -->
+                <div class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">
+                      <i class="fa-solid fa-users me-2 text-secondary"></i>
+                      Capacidad máxima de huéspedes
+                    </h5>
+                  </div>
+                  <p class="mb-1">Hasta 240 huéspedes</p>
+                  <small>Considerando ocupación doble y familiar.</small>
+                </div>
+
+                <!-- item 3 -->
+                <div class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">
+                      <i class="fa-solid fa-layer-group me-2 text-secondary"></i>
+                      Número de pisos
+                    </h5>
+                  </div>
+                  <p class="mb-1">8 pisos.</p>
+                  <small>Distribuidos entre áreas de alojamiento y servicios.</small>
+                </div>
+
+                <!-- item 4 -->
+                <div class="list-group-item list-group-item-action">
+                  <div class="d-flex w-100 justify-content-between">
+                    <h5 class="mb-1">
+                      <i class="fa-solid fa-calendar-check me-2 text-secondary"></i>
+                      Año de última renovación
+                    </h5>
+                  </div>
+                  <p class="mb-1">2023.</p>
+                  <small>Actualización de habitaciones, áreas comunes y tecnología.</small>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- SECCION DE HABITACIONES -->
+      <section>
+        <!-- TITULO -->
+        <h2 class="h2 fw-semibold lh-sm text-primary m-3 fs-4 text-uppercase text-center">Tipos de Habitaciones</h2>
+        <!-- CONTENEDOR DE CARRUSEL CON BOTONES DE DEKTOP -->
+        <div id="contendor-carrusel-botones" class="container-fluid d-flex flex-row justify-content-center align-items-center gap-2">
+
+          <!-- BOTONES DE NAVEGACIÓN DESKTOP -->
+          <button aria-label="Habitación anterior" class="btn btn-anterior btn-primary order-0 d-none d-md-block">
+            <!-- d-none : en pantallas pequenas se oculta y en grandes con d-block aparece -->
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button aria-label="Siguiente habitación" class="btn btn-siguiente btn-primary order-2 d-block d-none d-md-block">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+
+          <!-- CARRUSEL -->
+          <div id="contenedor-carrusel" class="contenedor-carrusel order-0 ">
+            <!-- en pantallas pequeñas se fomra en columnas, en granes en fila -->
+            <div id="trak" class="trak order-1">
+              <!-- CARTA 1 HABITACION ESTANDAR -->
+              <div class="card mb-2 bg-body shadow-sm border-secondary-subtle w-100 w-md-75" id="habitacion-estandar">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="h-100 overflow-hidden rounded-start">
+                      <img
+                        src="img/habitaciones/habitacion.png"
+                        loading="lazy"
+                        alt="Habitación estándar del Aurora Hotel con cama queen y diseño moderno"
+                        class="w-100 h-100 object-fit-cover"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-start h-100">
+                      <h3 class="h3 card-title text-primary mb-3">
+                        <i class="fa-solid fa-bed me-2 text-secondary"></i>Habitación Estandar
+                      </h3>
+                      <p class="card-text">
+                        Habitación acogedora y funcional, ideal para viajeros individuales o parejas que buscan comodidad y conveniencia
+                        durante su estancia.
+                      </p>
+                      <p class="text-secondary fw-semibold">Desde $80 USD / noche</p>
+                      <p class="capacidad">Capacidad: 1-2 personas</p>
+                      <button class="btn btn-primary mt-2" aria-label="Botón para reservar esta habitación">Reservar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARTA 2 HABITACION SUPERIOR -->
+              <div class="card mb-2 bg-body shadow-sm border-secondary-subtle w-100 w-md-75" id="habitacion-superior">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="h-100 overflow-hidden rounded-start">
+                      <img
+                        src="img/habitaciones/habitacion2.png"
+                        loading="lazy"
+                        alt="Habitación Superior con cama king, área de descanso, minibar y baño con amenities premium"
+                        class="w-100 h-100 object-fit-cover"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-start h-100">
+                      <h3 class="h3 card-title text-primary mb-3">
+                        <i class="fa-solid fa-bed me-2 text-secondary"></i>Habitación Superior
+                      </h3>
+                      <p class="card-text">
+                        Habitación elegante con cama king, área de descanso, escritorio amplio y baño con ducha y amenities premium, ideal
+                        para una estancia cómoda y relajante.
+                      </p>
+                      <p class="text-secondary fw-semibold">Desde $120 USD / noche</p>
+                      <p class="capacidad">Capacidad: 2 personas</p>
+                      <button class="btn btn-primary mt-2" aria-label="Botón para reservar esta habitación">Reservar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARTA 3 HABITACION FAMILIAR -->
+              <div class="card mb-2 bg-body shadow-sm border-secondary-subtle w-100 w-md-75" id="habitacion-familiar">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="h-100 overflow-hidden rounded-start">
+                      <img
+                        src="img/habitaciones/habitacion3.png"
+                        loading="lazy"
+                        alt="Habitación Familiar amplia con cama queen y dos camas individuales, ideal para familias"
+                        class="w-100 h-100 object-fit-cover"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-start h-100">
+                      <h3 class="h3 card-title text-primary mb-3">
+                        <i class="fa-solid fa-bed me-2 text-secondary"></i>Habitación Familiar
+                      </h3>
+                      <p class="card-text">
+                        Espaciosa habitación familiar con una cama queen y dos camas individuales, baño privado y área de guardado extra,
+                        perfecta para viajar en grupo.
+                      </p>
+                      <p class="text-secondary fw-semibold">Desde $160 USD / noche</p>
+                      <p class="capacidad">Capacidad: hasta 4 personas</p>
+                      <button class="btn btn-primary mt-2" aria-label="Botón para reservar esta habitación">Reservar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CARTA 4 Suite VIP -->
+              <div class="card mb-2 bg-body shadow-sm border-secondary-subtle w-100 w-md-75" id="habitacion-vip">
+                <div class="row">
+                  <div class="col-md-6">
+                    <div class="h-100 overflow-hidden rounded-start">
+                      <img
+                        src="img/habitaciones/habitacion4.png"
+                        loading="lazy"
+                        alt="Suite VIP con cama king, sala privada, bañera y vista panorámica"
+                        class="w-100 h-100 object-fit-cover"
+                      />
+                    </div>
+                  </div>
+                  <div class="col-md-6">
+                    <div class="card-body d-flex flex-column justify-content-center align-items-start h-100">
+                      <h3 class="h3 card-title text-primary mb-3"><i class="fa-solid fa-bed me-2 text-secondary"></i>Suite VIP</h3>
+                      <p class="card-text">
+                        Suite exclusiva con cama king, sala privada, baño con bañera, minibar incluido y vista panorámica, pensada para una
+                        experiencia de lujo con check-in preferencial.
+                      </p>
+                      <p class="text-secondary fw-semibold">Desde $220 USD / noche</p>
+                      <p class="capacidad">Capacidad: 2 personas</p>
+                      <button class="btn btn-primary mt-2" aria-label="Botón para reservar esta habitación">Reservar</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+         <!-- BOTONES DE NAVEGACIÓN MOBILE -->
+          <div class="d-flex d-md-none gap-3 justify-content-center">
+            <button class="btn btn-anterior btn-primary">Anterior</button>
+            <button class="btn btn-siguiente btn-primary">Siguiente</button>
+          </div>
+        </div>
+        <!-- INDICADORES / LÍNEAS -->
+        <div class="d-flex justify-content-center mt-3 gap-2">
+          <span class="indicador active"></span>
+          <span class="indicador"></span>
+          <span class="indicador"></span>
+          <span class="indicador"></span>
+      </section>
     </main>
 
     <div id="footer"></div>
@@ -44,7 +290,7 @@
     <!-- SCRIPT Bootstrap  -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- SCRIPT PERSONAL-->
-     <script src="script/plantilla.js"></script>
     <script src="script/app.js"></script>
+    <script src="script/inicio.js"></script>
   </body>
 </html>

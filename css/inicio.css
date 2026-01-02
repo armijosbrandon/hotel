@@ -1,0 +1,52 @@
+:root {
+  /* Base */
+  --color-bg: #f2f1ef;
+
+  /* Marca */
+  --color-primary: #1f3a4a;
+  --color-primary-alfa: #1f3a4a60;
+
+  /* Premium / Acentos */
+  --color-secondary: #c9a24d; /* Dorado suave */
+  --color-accent: #7a8f7a;
+
+  /* Fondos */
+  --color-beige: #e6d8c3; /* Beige arena */
+
+  /* Neutros */
+  --color-light: #f2f1ef;
+  --color-text: #333333;
+}
+#contenedor-carrusel {
+  overflow: hidden; /* Oculta cualquier contenido que se desborde */
+}
+
+.trak { /* Contenedor de las cartas encargado de moverse */
+  display: flex;
+  --mov:0%; /* Variable para controlar el movimiento */
+  will-change: transform; /* Optimización para animaciones */
+}
+
+.trak.move{
+  transition: transform 0.45s ease; /* Transición suave para el movimiento */
+  transform: translateX(var(--mov));
+}
+
+.trak .card {
+  flex: 0 0 100%; /* tamaño por defecto de las cartas, no se reducen ni aumentan*/
+}
+
+.indicador {
+  display: inline-block;
+  width: 40px;     /* ancho de cada línea */
+  height: 4px;     /* alto de cada línea */
+  background-color: var(--color-primary-alfa); /* color base */
+  border-radius: 2px;
+  transition: background-color 0.3s ease;
+}
+
+.indicador.active {
+  background-color: var(--color-primary); /* color de la slide activa */
+}
+
+
