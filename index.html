@@ -135,7 +135,6 @@
         <h2 class="h2 fw-semibold lh-sm text-primary m-3 fs-4 text-uppercase text-center">Tipos de Habitaciones</h2>
         <!-- CONTENEDOR DE CARRUSEL CON BOTONES DE DEKTOP -->
         <div id="contendor-carrusel-botones" class="container-fluid d-flex flex-row justify-content-center align-items-center gap-2">
-
           <!-- BOTONES DE NAVEGACIÓN DESKTOP -->
           <button aria-label="Habitación anterior" class="btn btn-anterior btn-primary order-0 d-none d-md-block">
             <!-- d-none : en pantallas pequenas se oculta y en grandes con d-block aparece -->
@@ -146,7 +145,7 @@
           </button>
 
           <!-- CARRUSEL -->
-          <div id="contenedor-carrusel" class="contenedor-carrusel order-0 ">
+          <div id="contenedor-carrusel" class="contenedor-carrusel order-0">
             <!-- en pantallas pequeñas se fomra en columnas, en granes en fila -->
             <div id="trak" class="trak order-1">
               <!-- CARTA 1 HABITACION ESTANDAR -->
@@ -270,11 +269,10 @@
           </div>
         </div>
 
-         <!-- BOTONES DE NAVEGACIÓN MOBILE -->
-          <div class="d-flex d-md-none gap-3 justify-content-center">
-            <button class="btn btn-anterior btn-primary">Anterior</button>
-            <button class="btn btn-siguiente btn-primary">Siguiente</button>
-          </div>
+        <!-- BOTONES DE NAVEGACIÓN MOBILE -->
+        <div class="d-flex d-md-none gap-3 justify-content-center">
+          <button class="btn btn-anterior btn-primary">Anterior</button>
+          <button class="btn btn-siguiente btn-primary">Siguiente</button>
         </div>
         <!-- INDICADORES / LÍNEAS -->
         <div class="d-flex justify-content-center mt-3 gap-2">
@@ -282,7 +280,9 @@
           <span class="indicador"></span>
           <span class="indicador"></span>
           <span class="indicador"></span>
+        </div>
       </section>
+      
     </main>
 
     <div id="footer"></div>
