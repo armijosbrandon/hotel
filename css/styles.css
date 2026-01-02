@@ -265,7 +265,6 @@ footer a:hover { /* linea de pestaña activa, after hace que se inserte despues 
 }
 
 .btn-primary:hover,
-.btn-primary:focus,
 .btn-primary:active,
 .btn-primary.active,
 .btn-primary.dropdown-toggle.show {
