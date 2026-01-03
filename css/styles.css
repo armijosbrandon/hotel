@@ -345,7 +345,6 @@ footer a:hover { /* linea de pestaña activa, after hace que se inserte despues 
 
 /* =======================
    BOTÓN ESPECIAL BEIGE
-   (útil para secciones)
    ======================= */
 .btn-beige {
   background-color: var(--color-beige) !important;
@@ -359,3 +358,44 @@ footer a:hover { /* linea de pestaña activa, after hace que se inserte despues 
   border-color: var(--color-beige) !important;
   color: var(--color-primary) !important;
 }
+
+/* NAVEGACION Y LINKS */
+/* NAV LINKS BASADOS EN PALETA */
+.nav-link {
+  color: var(--color-text); /* color por defecto */
+}
+
+.nav-link:hover {
+  color: var(--color-primary); /* hover color */
+}
+
+.nav-link.active {
+  color: var(--color-accent); /* color del link activo */
+  font-weight: 600;            
+}
+
+.nav-link.disabled {
+  color: var(--color-light); 
+  opacity: 0.6;              
+  pointer-events: none;
+}
+
+.nav-tabs .nav-link {
+  border: none; /* quita borde por defecto */
+  color: var(--color-text);
+}
+
+.nav-tabs .nav-link.active {
+  color: var(--color-accent);
+  border-bottom: 3px solid var(--color-accent); /* borde activo personalizado */
+}
+
+.nav-tabs .nav-link.active {
+  background-color: var(--color-light);
+  color: var(--color-accent);
+}
+.nav-tabs .nav-link:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+

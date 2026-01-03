@@ -17,10 +17,12 @@
   --color-light: #f2f1ef;
   --color-text: #333333;
 }
+/* -----------------CARRUSEL -----------------*/
 #contenedor-carrusel {
   overflow: hidden; /* Oculta cualquier contenido que se desborde */
 }
 
+/* Contenedor de las cartas encargado de moverse */
 .trak { /* Contenedor de las cartas encargado de moverse */
   display: flex;
   --mov:0%; /* Variable para controlar el movimiento */
@@ -36,6 +38,7 @@
   flex: 0 0 100%; /* tamaño por defecto de las cartas, no se reducen ni aumentan*/
 }
 
+/* Indicador de slides */
 .indicador {
   display: inline-block;
   width: 40px;     /* ancho de cada línea */
@@ -48,5 +51,6 @@
 .indicador.active {
   background-color: var(--color-primary); /* color de la slide activa */
 }
+
 
 
