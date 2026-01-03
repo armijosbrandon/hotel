@@ -1,0 +1,13 @@
+@media (max-width: 768px) {
+  .title-mobile {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .text-mobile {
+    font-size: 0.82rem;
+    line-height: 1.25;
+  }
+}
+
+
