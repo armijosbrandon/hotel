@@ -282,7 +282,8 @@
           <span class="indicador"></span>
         </div>
       </section>
-      <!-- SERVICIOS DEL HOTEL -->
+
+      <!-------------------- SERVICIOS DEL HOTEL------ -->
       <section class="container my-5">
         <h2 class="h2 fw-semibold lh-sm text-primary m-3 fs-4 text-uppercase text-center">Servicios del Hotel</h2>
         <div class="row g-3 justify-content-center">
@@ -341,13 +342,105 @@
             <div class="card h-100 text-center shadow-sm border-secondary-subtle">
               <div class="card-body">
                 <i class="fa-solid fa-suitcase-rolling fa-2x text-primary mb-3"></i>
-                <p class="fw-semibold mb-0">Almacenamiento de equipaje</p>
+                <p class="fw-semibold mb-0 text-success">Almacenamiento de equipaje</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!----------------- Condiciones y horarios -->
+      <section id="informacion-extra container-fluid">
+        <h2 class="h2 fw-semibold m-3 lh-sm text-primary fs-4 text-uppercase text-center">Condiciones y horarios</h2>
+        <div class="row px-2 px-md-5 g-4 justify-content-center">
+          <!-- -----Historia del hotel -->
+          <div class="col-md-4">
+            <div class="card text-center" style="max-width: 400px; margin: auto">
+              <!-- Título -->
+              <div class="card-header text-primary">
+                <h4 class="mb-0">Aurora Hotel</h4>
+              </div>
+
+              <!-- Imagen -->
+              <img src="img/hotel.png" class="card-img-top" alt="Imagen del hotel" />
+
+              <!-- Historia corta -->
+              <div class="card-body text-dark">
+                <p class="card-text">Fundado en 1995, Aurora Hotel combina comodidad y tradición en un ambiente acogedor junto al mar.</p>
+              </div>
+            </div>
+          </div>
+          <!-- -----Pestañas de información -->
+          <div class="col-md-8">
+            <div class="card text-center">
+              <div class="card-header">
+                <ul class="nav nav-tabs card-header-tabs justify-content-center" role="tablist">
+                  <!-- tabs le da estilo de pestañas -->
+                  <li class="nav-item">
+                    <!-- data-bs-toggle="tab" añade la funcion de navegacion interfa por un link # -->
+                    <a class="nav-link active" data-bs-toggle="tab" href="#horarios" role="tab"> Horarios del hotel </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#politicas" role="tab"> Políticas de cancelación </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" data-bs-toggle="tab" href="#ubicacion" role="tab"> Reglas generales </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="card-body tab-content">
+                <!-- tab-content agrupa contenidos de las pestañas -->
+                <div class="tab-pane fade show active" id="horarios" role="tabpanel">
+                  <!--  fade show  efecto de desvanecimiento-->
+                  <!-- role="tabpanel" indica que este contenido pertenece a una pestaña -->
+                  <h5 class="text-primary card-title"><i class="fa-solid fa-clock me-2 text-secondary"></i>Check-in / Check-out</h5>
+                  <ul class="list-unstyled text-dark card-text">
+                    <li><i class="fa-regular fa-clock me-2 text-secondary"></i>Check-in: 15:00</li>
+                    <li><i class="fa-regular fa-clock me-2 text-secondary"></i>Check-out: 11:00</li>
+                    <li><i class="fa-solid fa-info me-2 text-accent"></i>Early / Late sujeto a disponibilidad</li>
+                  </ul>
+                </div>
+
+                <div class="tab-pane fade" id="politicas" role="tabpanel">
+                  <h5 class="card-title text-primary">
+                    <i class="fa-solid fa-circle-info me-2 text-secondary"></i>Políticas de cancelación
+                  </h5>
+                  <ul class="list-unstyled text-dark">
+                    <li><i class="fa-solid fa-check me-2 text-accent"></i>Cancelación gratuita hasta 48h antes</li>
+                    <li><i class="fa-solid fa-times me-2 text-accent"></i>Fuera de plazo: 1 noche</li>
+                    <li><i class="fa-solid fa-exchange-alt me-2 text-accent"></i>Cambios sujetos a disponibilidad</li>
+                  </ul>
+                </div>
+
+                <div class="tab-pane fade" id="ubicacion" role="tabpanel">
+                  <h5 class="card-title text-primary"><i class="fa-solid fa-shield-alt me-2 text-secondary"></i>Reglas del hotel</h5>
+                  <ul class="list-unstyled text-dark">
+                    <li><i class="fa-solid fa-smoking-ban me-2 text-accent"></i>No fumar</li>
+                    <li><i class="fa-solid fa-paw me-2 text-accent"></i>Mascotas pequeñas permitidas</li>
+                    <li><i class="fa-solid fa-moon me-2 text-accent"></i>Respetar horarios</li>
+                    <li><i class="fa-solid fa-ban me-2 text-accent"></i>No fiestas</li>
+                    <li><i class="fa-solid fa-child me-2 text-accent"></i>Menores acompañados</li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </section>
     </main>
+
+    <!-- Información adicional útil -->
+    <section class="container my-4 text-center" id="info-adicional">
+      <h5 class="text-primary mb-3"><i class="fa-solid fa-circle-info me-2 text-secondary"></i>Información adicional útil</h5>
+
+      <ul class="list-unstyled text-dark mb-0">
+        <li><i class="fa-solid fa-comment me-2 text-accent"></i>Idiomas hablados en recepción: Español e Inglés</li>
+        <li><i class="fa-solid fa-wheelchair me-2 text-accent"></i>Hotel accesible para personas con movilidad reducida</li>
+        <li><i class="fa-solid fa-credit-card me-2 text-accent"></i>Pago con tarjetas de crédito y débito</li>
+        <li><i class="fa-solid fa-file-invoice me-2 text-accent"></i>Facturación disponible bajo solicitud</li>
+      </ul>
+    </section>
 
     <div id="footer"></div>
 
