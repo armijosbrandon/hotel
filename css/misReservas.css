@@ -1,0 +1,44 @@
+/* ------------VARIABLES DE COLOR -----------*/
+:root {
+  /* Base */
+  --color-bg: #F2F1EF;
+
+  /* Marca */
+  --color-primary: #1f3a4a;
+  --color-primary-alfa: #1f3a4a60;
+
+  /* Premium / Acentos */
+  --color-secondary: #C9A24D; /* Dorado suave */
+  --color-accent: #7a8f7a;
+
+  /* Fondos */
+  --color-beige: #E6D8C3; /* Beige arena */
+
+  /* Neutros */
+  --color-light: #f2f1ef;
+  --color-text: #333333;
+
+  /* Extras */
+  --color-info: #4A90E2;
+  --color-danger: #D9534F;
+  --color-warning: #F0AD4E;
+}
+
+.accordion-collapse {
+  position: absolute;
+  width: 100%;
+  z-index: 10;
+}
+
+.accordion .list-group-item dt {
+  font-weight: 500;
+  color: var(--color-secondary);
+  margin-bottom: 0.25rem;
+}
+
+
+.accordion .accordion-collapse .bg-body {
+border: solid 1px var(--color-info);
+  border-radius: 0 0 0.25rem 0.25rem; /* bordes redondeados en la parte inferior */
+}
+
