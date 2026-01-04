@@ -469,17 +469,17 @@ footer a:hover { /* linea de pestaña activa, after hace que se inserte despues 
 }
 
 /* FORMULARIOS – PALETA GENERAL */
-
-/* Variables Bootstrap */
+/* Variables Bootstrap base */
 .form-control,
 .form-select,
 .form-check-input {
   --bs-body-bg: var(--color-light);
   --bs-body-color: var(--color-text);
-  --bs-border-color: var(--color-light);
+  --bs-border-color: var(--color-primary-alfa);
   --bs-focus-ring-color: transparent;
 }
 
+/* Inputs, selects y textarea */
 .form-control,
 .form-select,
 textarea,
@@ -491,7 +491,7 @@ input[type="time"],
 input[type="password"] {
   background-color: var(--color-light);
   color: var(--color-text);
-  border: 1px solid var(--color-light);
+  border: 1px solid var(--color-primary-alfa);
   border-radius: 0.375rem;
   padding: 0.5rem 0.75rem;
 }
@@ -503,16 +503,18 @@ textarea::placeholder {
   opacity: 0.6;
 }
 
+/* Focus */
 .form-control:focus,
 .form-select:focus,
 textarea:focus,
 input:focus {
   border-color: var(--color-accent);
-  box-shadow: none; /* evita glow azul de Bootstrap */
+  box-shadow: none;
   background-color: var(--color-light);
   color: var(--color-text);
 }
 
+/* Disabled / readonly */
 .form-control:disabled,
 .form-control[readonly],
 .form-select:disabled,
@@ -522,29 +524,32 @@ input:disabled {
   cursor: not-allowed;
 }
 
+/* Checkboxes y radios */
 .form-check-input {
   background-color: var(--color-light);
-  border: 1px solid var(--color-light);
+  border: 1px solid var(--color-primary-alfa);
 }
 
 /* Checked */
 .form-check-input:checked {
-  background-color: var(--color-accent);
-  border-color: var(--color-accent);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
 }
 
-/* Focus */
+/* Focus checkbox / radio */
 .form-check-input:focus {
   box-shadow: none;
   border-color: var(--color-accent);
 }
 
+/* Labels */
 .form-label,
 label {
   color: var(--color-text);
   font-weight: 500;
 }
 
+/* Validación */
 .is-valid {
   border-color: var(--color-success, #198754);
 }
@@ -557,16 +562,17 @@ label {
   color: var(--color-danger, #dc3545);
 }
 
+/* Fieldset */
 fieldset {
-  border: 1px solid var(--color-light);
+  border: 1px solid var(--color-primary-alfa);
   padding: 1rem;
   border-radius: 0.375rem;
 }
 
+/* Legend */
 legend {
   font-size: 0.9rem;
   font-weight: 600;
   color: var(--color-accent);
   padding: 0 0.5rem;
 }
-
