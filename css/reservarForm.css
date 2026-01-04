@@ -1,6 +1,19 @@
 .card{
   width: 90% !important;
 }
+#habitacion-estandar {
+  scroll-margin-top: 20px; /* ajusta según tu layout */
+}
+#habitacion-superior {
+  scroll-margin-top: 20px; /* ajusta según tu layout */
+}
+#habitacion-familiar {
+  scroll-margin-top: 20px; /* ajusta según tu layout */
+}
+#habitacion-vip {
+  scroll-margin-top: 20px; /* ajusta según tu layout */
+}
+
 @media (max-width: 768px) {
   .card{
     width: 100% !important;
