@@ -1,55 +1,170 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aurora Hotel | Sistema de Reservacion</title>
-    <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
-    <!--poner imagen a la pestaña-->
-    <meta name="description" content="Aurora Hotel es un hotel moderno con habitaciones confortables, servicios premium y un sistema de reservaciones fácil y rápido para una estancia inolvidable." />
-    <!-- ---------ESTILOS------ -->
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
-    <!-- PERSONALES -->
-    <link rel="stylesheet" href="css/styles.css" />
-    <link rel="stylesheet" href="css/reservarForm.css" />
-    <!--librerias-->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <!--libreria de iconos-->
-  </head>
 
-  <body>
-    <!-- ---------------------BARRA DE INFORMACION-HEADER-HERO -------------->
-    <div id="info-header-hero"></div>
-    <!-- se cargara automaticamente con jvscript -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aurora Hotel | Sistema de Reservacion</title>
+  <link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+  <!--poner imagen a la pestaña-->
+  <meta name="description"
+    content="Aurora Hotel es un hotel moderno con habitaciones confortables, servicios premium y un sistema de reservaciones fácil y rápido para una estancia inolvidable." />
+  <!-- ---------ESTILOS------ -->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <!-- PERSONALES -->
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/reservarForm.css" />
+  <!--librerias-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--libreria de iconos-->
+</head>
 
-    <main>
-      <!-- TITULO -->
-      <h2 class="h2 fw-semibold my-4 lh-sm text-primary fs-4 text-uppercase text-center">Sistema de Reservación</h2>
+<body>
+  <!-- ---------------------BARRA DE INFORMACION-HEADER-HERO -------------->
+  <div id="info-header-hero"></div>
+  <!-- se cargara automaticamente con jvscript -->
+
+  <main>
+    <!-- TITULO DE PAGINA -->
+    <h2 class="text-primary h2 text-center fw-semibold my-4 lh-sm text-uppercase"> Sistema de Reservación</h2>
+    <!-- FORMULARIO DE RESERVA -->
+    <section class="container my-3 card shadow">
+      <div class="card-body">
+        <h3 class="card-title text-primary h3 mb-4">Formulario de Reserva</h3>
+        <form>
+          <!-- Horarios -->
+          <h5 class="mb-3">Horarios</h5>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label class="form-label">Fecha y hora de entrada</label>
+              <input type="datetime-local" class="form-control" required>
+            </div>
+            <div class="col-md-6">
+              <label class="form-label">Fecha y hora de salida</label>
+              <input type="datetime-local" class="form-control" required>
+            </div>
+          </div>
+
+          <!-- Huespedes -->
+          <h5 class="mb-3">Huéspedes</h5>
+          <div class="row mb-3">
+            <div class="col-md-4">
+              <label class="form-label">Adultos</label>
+              <input type="number" class="form-control" min="1" value="1">
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Niños</label>
+              <input type="number" class="form-control" min="0" value="0">
+            </div>
+            <div class="col-md-4">
+              <label class="form-label">Bebés</label>
+              <input type="number" class="form-control" min="0" value="0">
+            </div>
+          </div>
+
+          <!-- Tipos de habitacion -->
+          <h5 class="mb-3">Tipos de habitación</h5>
+          <p class="text-muted">Indica cuántas habitaciones deseas de cada tipo</p>
+          <div class="row mb-3">
+            <div class="col-md-3">
+              <label class="form-label">Estándar</label>
+              <input type="number" class="form-control" min="0" value="0" required>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Superior</label>
+              <input type="number" class="form-control" min="0" value="0" required>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Familiar</label>
+              <input type="number" class="form-control" min="0" value="0" required>
+            </div>
+            <div class="col-md-3">
+              <label class="form-label">Suite VIP</label>
+              <input type="number" class="form-control" min="0" value="0" required>
+            </div>
+          </div>
+
+          <!-- Servicios adicionales -->
+          <h5 class="mb-3">Servicios adicionales</h5>
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="desayuno">
+                <label class="form-check-label" for="desayuno">
+                  Desayuno incluido
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="transporte">
+                <label class="form-check-label" for="transporte">
+                  Transporte
+                </label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="spa">
+                <label class="form-check-label" for="spa">
+                  Acceso a spa
+                </label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="mascotas">
+                <label class="form-check-label" for="mascotas">
+                  Alojamiento con mascotas
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <!-- Precio estimado -->
+          <div class="alert alert-info mt-4">
+            <strong>Precio estimado:</strong><br>
+            El precio final se confirmará al completar la reserva.
+          </div>
+
+          <!-- Mensaje de sesión -->
+          <div class="alert alert-warning">
+            Debes iniciar sesión para finalizar la reserva.
+          </div>
+
+          <!-- Botón -->
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary btn-lg">
+              Reservar
+            </button>
+          </div>
+
+        </form>
+      </div>
+      </section>
 
       <!--  HABITACIONES-->
-      <section class="container-fluid d-flex flex-column px-3 px-md-5 mt-0 gap-4"  id="sección-habitaciones">
+      <section class="container-fluid d-flex flex-column px-3 px-md-5 my-3 gap-4" id="sección-habitaciones">
+        <!-- TITULO -->
+        <h2 class="h2 fw-semibold my-4 lh-sm text-primary fs-4 text-uppercase text-center">Habitaciones Disponibles</h2>
         <!---- HABITACION ESTANDAR-->
         <article class="card mb-2 bg-body shadow-sm border-secondary-subtle" id="habitacion-estandar">
           <!-- IMAGEN -->
           <div class="row">
             <div class="col-md-5 col-12">
               <div class="h-100 overflow-hidden rounded-top rounded-md-start">
-                <img src="img/habitaciones/habitacion.png" loading="lazy" alt="Habitación estándar del Aurora Hotel con cama queen y diseño moderno" class="w-100 h-100 object-fit-cover" />
+                <img src="img/habitaciones/habitacion.png" loading="lazy"
+                  alt="Habitación estándar del Aurora Hotel con cama queen y diseño moderno"
+                  class="w-100 h-100 object-fit-cover" />
               </div>
             </div>
             <!-- TEXTO -->
             <div class="col-md-7 col-12">
               <div class="card-body text-mobile d-flex flex-column justify-content-center align-items-start h-100">
-                <h3 class="h3 card-title text-primary mb-md-3 mb-2 title-mobile"><i class="fa-solid fa-bed me-2 text-secondary" aria-hidden="true"></i>Habitación Estandar</h3>
+                <h3 class="h3 card-title text-primary mb-md-3 mb-2 title-mobile"><i
+                    class="fa-solid fa-bed me-2 text-secondary" aria-hidden="true"></i>Habitación Estandar</h3>
                 <!-- titulo de carta -->
-                <p class="card-text mb-md-3 mb-2">Habitación acogedora y funcional, ideal para viajeros individuales o parejas que buscan comodidad y conveniencia durante su estancia.</p>
+                <p class="card-text mb-md-3 mb-2">Habitación acogedora y funcional, ideal para viajeros individuales o
+                  parejas que buscan comodidad y conveniencia durante su estancia.</p>
                 <div class="row w-100 mb-md-3 mb-1">
                   <!-- COMODIDADES INCLUIDAS -->
                   <div class="col-12 col-md-6">
@@ -76,14 +191,9 @@
                     <div class="accordion w-100 d-md-none d-block">
                       <div class="accordion-item">
                         <h4 class="accordion-header" id="headingOne">
-                          <button
-                            class="accordion-button collapsed text-primary"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseOne"
-                            aria-expanded="false"
-                            aria-controls="collapseOne"
-                          >
+                          <button class="accordion-button collapsed text-primary" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false"
+                            aria-controls="collapseOne">
                             Servicios adicionales
                           </button>
                         </h4>
@@ -140,7 +250,9 @@
                 <!-- precio -->
                 <p class="text-secondary fw-semibold mt-1 mt-md-2">Desde <strong>$80 USD</strong> / noche</p>
                 <!-- btn -->
-                <button class="btn btn-primary mt-1 mt-md-2" aria-label="Añadir habitación estándar a la reserva">Añadir a reserva</button>
+                <button class="btn btn-primary mt-1 mt-md-2" aria-label="Añadir habitación estándar a la reserva">Añadir
+                  a
+                  reserva</button>
               </div>
             </div>
           </div>
@@ -153,21 +265,20 @@
             <div class="row">
               <div class="col-md-5 col-12">
                 <div class="h-100 overflow-hidden rounded-top rounded-md-start">
-                  <img
-                    src="img/habitaciones/habitacion2.png"
-                    loading="lazy"
+                  <img src="img/habitaciones/habitacion2.png" loading="lazy"
                     alt="Habitación Superior con cama king, área de descanso, minibar y baño con amenities premium"
-                    class="w-100 h-100 object-fit-cover"
-                  />
+                    class="w-100 h-100 object-fit-cover" />
                 </div>
               </div>
 
               <!-- TEXTO -->
               <div class="col-md-7 col-12">
                 <div class="card-body text-mobile d-flex flex-column justify-content-center align-items-start h-100">
-                  <h3 class="h3 card-title text-primary mb-md-3 mb-2 title-mobile"><i class="fa-solid fa-bed me-2 text-secondary" aria-hidden="true"></i>Habitación Superior</h3>
+                  <h3 class="h3 card-title text-primary mb-md-3 mb-2 title-mobile"><i
+                      class="fa-solid fa-bed me-2 text-secondary" aria-hidden="true"></i>Habitación Superior</h3>
 
-                  <p class="card-text mb-md-3 mb-2">Habitación elegante con cama king, área de descanso y escritorio amplio, ideal para una estancia cómoda y relajante.</p>
+                  <p class="card-text mb-md-3 mb-2">Habitación elegante con cama king, área de descanso y escritorio
+                    amplio, ideal para una estancia cómoda y relajante.</p>
 
                   <div class="row w-100 mb-md-3 mb-1">
                     <!-- COMODIDADES INCLUIDAS -->
@@ -178,7 +289,7 @@
                           <i class="fa-solid fa-bed me-2 text-success" aria-hidden="true"></i>
                           1 cama king
                         </li>
-                                                <li class="list-group-item">
+                        <li class="list-group-item">
                           <i class="fa-solid fa-wifi me-2 text-success" aria-hidden="true"></i>
                           Wi-Fi de alta velocidad
                         </li>
@@ -195,15 +306,20 @@
                       <div class="accordion d-md-none">
                         <div class="accordion-item">
                           <h4 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#superiorExtras">Servicios adicionales</button>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#superiorExtras">Servicios adicionales</button>
                           </h4>
                           <div id="superiorExtras" class="accordion-collapse collapse">
                             <div class="accordion-body">
                               <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>Área de descanso</li>
-                                <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>Minibar</li>
-                                <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>Baño con amenities premium</li>
-                                <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>TV Smart</li>
+                                <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                                    aria-hidden="true"></i>Área de descanso</li>
+                                <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                                    aria-hidden="true"></i>Minibar</li>
+                                <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                                    aria-hidden="true"></i>Baño con amenities premium</li>
+                                <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                                    aria-hidden="true"></i>TV Smart</li>
                               </ul>
                             </div>
                           </div>
@@ -214,10 +330,14 @@
                       <div class="d-none d-md-block">
                         <h4 class="text-success mb-md-2 title-mobile">Servicios adicionales</h4>
                         <ul class="list-group list-group-flush">
-                          <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>Área de descanso</li>
-                          <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>Minibar</li>
-                          <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>Baño con amenities premium</li>
-                          <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>TV Smart</li>
+                          <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                              aria-hidden="true"></i>Área de descanso</li>
+                          <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                              aria-hidden="true"></i>Minibar</li>
+                          <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                              aria-hidden="true"></i>Baño con amenities premium</li>
+                          <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                              aria-hidden="true"></i>TV Smart</li>
                         </ul>
                       </div>
                     </div>
@@ -237,21 +357,20 @@
           <div class="row">
             <div class="col-md-5 col-12">
               <div class="h-100 overflow-hidden rounded-top rounded-md-start">
-                <img
-                  src="img/habitaciones/habitacion3.png"
-                  loading="lazy"
+                <img src="img/habitaciones/habitacion3.png" loading="lazy"
                   alt="Habitación Familiar amplia con cama queen y dos camas individuales, ideal para familias"
-                  class="w-100 h-100 object-fit-cover"
-                />
+                  class="w-100 h-100 object-fit-cover" />
               </div>
             </div>
 
             <!-- TEXTO -->
             <div class="col-md-7 col-12">
               <div class="card-body text-mobile d-flex flex-column justify-content-center align-items-start h-100">
-                <h3 class="h3 card-title text-primary mb-md-3 mb-2 title-mobile"><i class="fa-solid fa-bed me-2 text-secondary" aria-hidden="true"></i>Habitación Familiar</h3>
+                <h3 class="h3 card-title text-primary mb-md-3 mb-2 title-mobile"><i
+                    class="fa-solid fa-bed me-2 text-secondary" aria-hidden="true"></i>Habitación Familiar</h3>
 
-                <p class="card-text mb-md-3 mb-2">Espaciosa habitación familiar diseñada para viajar en grupo, con excelente distribución y comodidad.</p>
+                <p class="card-text mb-md-3 mb-2">Espaciosa habitación familiar diseñada para viajar en grupo, con
+                  excelente distribución y comodidad.</p>
 
                 <div class="row w-100 mb-md-3 mb-1">
                   <!-- COMODIDADES INCLUIDAS -->
@@ -262,12 +381,12 @@
                         <i class="fa-solid fa-bed me-2 text-success" aria-hidden="true"></i>
                         1 cama queen + 2 camas individuales
                       </li>
-                     
+
                       <li class="list-group-item">
                         <i class="fa-solid fa-wifi me-2 text-success" aria-hidden="true"></i>
                         Wi-Fi incluido
                       </li>
-                       <li class="list-group-item">
+                      <li class="list-group-item">
                         <i class="fa-solid fa-users me-2 text-success" aria-hidden="true"></i>
                         <strong>Capacidad:</strong> hasta 4 personas
                       </li>
@@ -280,15 +399,20 @@
                     <div class="accordion d-md-none">
                       <div class="accordion-item">
                         <h4 class="accordion-header">
-                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#familiarExtras">Servicios adicionales</button>
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#familiarExtras">Servicios adicionales</button>
                         </h4>
                         <div id="familiarExtras" class="accordion-collapse collapse">
                           <div class="accordion-body">
                             <ul class="list-group list-group-flush">
-                              <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>Espacio amplio</li>
-                              <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>Baño privado</li>
-                              <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>TV pantalla plana</li>
-                              <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>Área de guardado extra</li>
+                              <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                                  aria-hidden="true"></i>Espacio amplio</li>
+                              <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                                  aria-hidden="true"></i>Baño privado</li>
+                              <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                                  aria-hidden="true"></i>TV pantalla plana</li>
+                              <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                                  aria-hidden="true"></i>Área de guardado extra</li>
                             </ul>
                           </div>
                         </div>
@@ -299,10 +423,14 @@
                     <div class="d-none d-md-block">
                       <h4 class="text-success mb-md-2 title-mobile">Servicios adicionales</h4>
                       <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>Espacio amplio</li>
-                        <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>Baño privado</li>
-                        <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>TV pantalla plana</li>
-                        <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>Área de guardado extra</li>
+                        <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                            aria-hidden="true"></i>Espacio amplio</li>
+                        <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                            aria-hidden="true"></i>Baño privado</li>
+                        <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                            aria-hidden="true"></i>TV pantalla plana</li>
+                        <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                            aria-hidden="true"></i>Área de guardado extra</li>
                       </ul>
                     </div>
                   </div>
@@ -322,16 +450,20 @@
             <div class="row">
               <div class="col-md-5 col-12">
                 <div class="h-100 overflow-hidden rounded-top rounded-md-start">
-                  <img src="img/habitaciones/habitacion4.png" loading="lazy" alt="Suite VIP con cama king, sala privada, bañera y vista panorámica" class="w-100 h-100 object-fit-cover" />
+                  <img src="img/habitaciones/habitacion4.png" loading="lazy"
+                    alt="Suite VIP con cama king, sala privada, bañera y vista panorámica"
+                    class="w-100 h-100 object-fit-cover" />
                 </div>
               </div>
 
               <!-- TEXTO -->
               <div class="col-md-7 col-12">
                 <div class="card-body text-mobile d-flex flex-column justify-content-center align-items-start h-100">
-                  <h3 class="h3 card-title text-primary mb-md-3 mb-2 title-mobile"><i class="fa-solid fa-bed me-2 text-secondary" aria-hidden="true"></i>Suite VIP</h3>
+                  <h3 class="h3 card-title text-primary mb-md-3 mb-2 title-mobile"><i
+                      class="fa-solid fa-bed me-2 text-secondary" aria-hidden="true"></i>Suite VIP</h3>
 
-                  <p class="card-text mb-md-3 mb-2">Suite exclusiva pensada para una experiencia de lujo, privacidad y confort superior.</p>
+                  <p class="card-text mb-md-3 mb-2">Suite exclusiva pensada para una experiencia de lujo, privacidad y
+                    confort superior.</p>
 
                   <div class="row w-100 mb-md-3 mb-1">
                     <!-- COMODIDADES INCLUIDAS -->
@@ -342,7 +474,7 @@
                           <i class="fa-solid fa-bed me-2 text-success" aria-hidden="true"></i>
                           1 cama king
                         </li>
-                        
+
                         <li class="list-group-item">
                           <i class="fa-solid fa-star me-2 text-success" aria-hidden="true"></i>
                           Amenidades premium
@@ -361,16 +493,22 @@
                       <div class="accordion d-md-none">
                         <div class="accordion-item">
                           <h4 class="accordion-header">
-                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#vipExtras">Servicios adicionales</button>
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                              data-bs-target="#vipExtras">Servicios adicionales</button>
                           </h4>
                           <div id="vipExtras" class="accordion-collapse collapse">
                             <div class="accordion-body">
                               <ul class="list-group list-group-flush">
-                                <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>Sala privada</li>
-                                <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>Baño con bañera</li>
-                                <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>Minibar incluido</li>
-                                <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>Vista panorámica</li>
-                                <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>Check-in preferencial</li>
+                                <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                                    aria-hidden="true"></i>Sala privada</li>
+                                <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                                    aria-hidden="true"></i>Baño con bañera</li>
+                                <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                                    aria-hidden="true"></i>Minibar incluido</li>
+                                <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                                    aria-hidden="true"></i>Vista panorámica</li>
+                                <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                                    aria-hidden="true"></i>Check-in preferencial</li>
                               </ul>
                             </div>
                           </div>
@@ -381,11 +519,16 @@
                       <div class="d-none d-md-block">
                         <h4 class="text-success mb-md-2 title-mobile">Servicios adicionales</h4>
                         <ul class="list-group list-group-flush">
-                          <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>Sala privada</li>
-                          <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>Baño con bañera</li>
-                          <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>Minibar incluido</li>
-                          <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>Vista panorámica</li>
-                          <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success" aria-hidden="true"></i>Check-in preferencial</li>
+                          <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                              aria-hidden="true"></i>Sala privada</li>
+                          <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                              aria-hidden="true"></i>Baño con bañera</li>
+                          <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                              aria-hidden="true"></i>Minibar incluido</li>
+                          <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                              aria-hidden="true"></i>Vista panorámica</li>
+                          <li class="list-group-item"><i class="fa-solid fa-check me-2 text-success"
+                              aria-hidden="true"></i>Check-in preferencial</li>
                         </ul>
                       </div>
                     </div>
@@ -399,14 +542,15 @@
           </article>
         </div>
       </section>
-    </main>
+  </main>
 
-    <div id="footer"></div>
+  <div id="footer"></div>
 
-    <!-- SCRIPT Bootstrap  -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- SCRIPT PERSONAL-->
-    <script src="script/plantilla.js"></script>
-    <script src="script/app.js"></script>
-  </body>
+  <!-- SCRIPT Bootstrap  -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- SCRIPT PERSONAL-->
+  <script src="script/plantilla.js"></script>
+  <script src="script/app.js"></script>
+</body>
+
 </html>
