@@ -201,10 +201,22 @@ footer a:hover { /* linea de pestaña activa, after hace que se inserte despues 
 
 }
 
-/* Estilos base: móviles (por defecto) */
+/* estilo de tamaño de fuente para moviles */
+@media (max-width: 768px) {
+  .title-mobile {
+    font-size: 1rem !important;
+    font-weight: 600 !important;
+  }
 
+  .text-mobile {
+    font-size: 0.82rem !important;
+    line-height: 1.25 !important;
+  }
+}
+/* puntos de quiebre mobile first */
 /* Teléfonos grandes */
 @media (min-width: 576px) {
+  
 }
 
 /* Tablets */
@@ -219,8 +231,8 @@ footer a:hover { /* linea de pestaña activa, after hace que se inserte despues 
   .nav-desktop{
     display: flex;
   }
-
 }
+
 
 /* Pantallas grandes */
 @media (min-width: 1200px) {
