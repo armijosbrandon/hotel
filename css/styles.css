@@ -18,6 +18,11 @@
   /* Neutros */
   --color-light: #f2f1ef;
   --color-text: #333333;
+
+  /* Extras */
+  --color-info: #4A90E2;
+  --color-danger: #D9534F;
+  --color-warning: #F0AD4E;
 }
 
 * {
@@ -351,6 +356,84 @@ footer a:hover { /* linea de pestaña activa, after hace que se inserte despues 
   border-color: var(--color-beige) !important;
   color: var(--color-primary) !important;
 }
+
+/* ESTILOS INFO-DANGER-WARNING PARA BOTONES, TEXTOS Y FONDOS */
+/* =======================
+   BACKGROUNDS
+   ======================= */
+.bg-info { background-color: var(--color-info) !important; }
+.bg-danger { background-color: var(--color-danger) !important; }
+.bg-warning { background-color: var(--color-warning) !important; }
+
+/* =======================
+   TEXT COLORS
+   ======================= */
+.text-info { color: var(--color-info) !important; }
+.text-danger { color: var(--color-danger) !important; }
+.text-warning { color: var(--color-warning) !important; }
+
+/* =======================
+   BORDERS
+   ======================= */
+.border-info { border-color: var(--color-info) !important; }
+.border-danger { border-color: var(--color-danger) !important; }
+.border-warning { border-color: var(--color-warning) !important; }
+
+/* =======================
+   BOTONES PERSONALIZADOS
+   ======================= */
+
+/* INFO */
+.btn-info {
+  background-color: var(--color-info) !important;
+  border-color: var(--color-info) !important;
+  color: var(--color-light) !important;
+}
+
+.btn-info:hover,
+.btn-info:focus,
+.btn-info:active,
+.btn-info.active,
+.btn-info.dropdown-toggle.show {
+  background-color: #3b7dc9 !important; /* un azul ligeramente más oscuro */
+  border-color: var(--color-info) !important;
+  color: var(--color-light) !important;
+}
+
+/* DANGER */
+.btn-danger {
+  background-color: var(--color-danger) !important;
+  border-color: var(--color-danger) !important;
+  color: var(--color-light) !important;
+}
+
+.btn-danger:hover,
+.btn-danger:focus,
+.btn-danger:active,
+.btn-danger.active,
+.btn-danger.dropdown-toggle.show {
+  background-color: #c03934 !important; /* rojo más intenso */
+  border-color: var(--color-danger) !important;
+  color: var(--color-light) !important;
+}
+
+/* WARNING */
+.btn-warning {
+  background-color: var(--color-warning) !important;
+  border-color: var(--color-warning) !important;
+  color: var(--color-text) !important;
+}
+
+.btn-warning:hover,
+.btn-warning:focus,
+.btn-warning:active,
+.btn-warning.active,
+.btn-warning.dropdown-toggle.show {
+  background-color: #e0953c !important; /* naranja más oscuro */
+  border-color: var(--color-warning) !important;
+  color: var(--color-text) !important;
+}
+
 
 .btn-beige:hover,
 .btn-beige:focus {
