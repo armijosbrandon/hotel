@@ -468,3 +468,105 @@ footer a:hover { /* linea de pestaña activa, after hace que se inserte despues 
   padding-right: 0;
 }
 
+/* FORMULARIOS – PALETA GENERAL */
+
+/* Variables Bootstrap */
+.form-control,
+.form-select,
+.form-check-input {
+  --bs-body-bg: var(--color-light);
+  --bs-body-color: var(--color-text);
+  --bs-border-color: var(--color-light);
+  --bs-focus-ring-color: transparent;
+}
+
+.form-control,
+.form-select,
+textarea,
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+input[type="time"],
+input[type="password"] {
+  background-color: var(--color-light);
+  color: var(--color-text);
+  border: 1px solid var(--color-light);
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+}
+
+/* Placeholder */
+.form-control::placeholder,
+textarea::placeholder {
+  color: var(--color-text);
+  opacity: 0.6;
+}
+
+.form-control:focus,
+.form-select:focus,
+textarea:focus,
+input:focus {
+  border-color: var(--color-accent);
+  box-shadow: none; /* evita glow azul de Bootstrap */
+  background-color: var(--color-light);
+  color: var(--color-text);
+}
+
+.form-control:disabled,
+.form-control[readonly],
+.form-select:disabled,
+input:disabled {
+  background-color: var(--color-light);
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.form-check-input {
+  background-color: var(--color-light);
+  border: 1px solid var(--color-light);
+}
+
+/* Checked */
+.form-check-input:checked {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+}
+
+/* Focus */
+.form-check-input:focus {
+  box-shadow: none;
+  border-color: var(--color-accent);
+}
+
+.form-label,
+label {
+  color: var(--color-text);
+  font-weight: 500;
+}
+
+.is-valid {
+  border-color: var(--color-success, #198754);
+}
+
+.is-invalid {
+  border-color: var(--color-danger, #dc3545);
+}
+
+.invalid-feedback {
+  color: var(--color-danger, #dc3545);
+}
+
+fieldset {
+  border: 1px solid var(--color-light);
+  padding: 1rem;
+  border-radius: 0.375rem;
+}
+
+legend {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--color-accent);
+  padding: 0 0.5rem;
+}
+
