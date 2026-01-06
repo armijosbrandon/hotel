@@ -1,0 +1,25 @@
+.overlay-gradient {
+  background: linear-gradient( /* degradado */
+    to top, /* empieza abajo y termina arriba */
+    rgba(0, 0, 0, 0.80), /* color inicial */
+    rgba(0, 0, 0, 0.15) 60%, /* color al 60% de altura */
+    transparent /* arriba de todo */
+  );
+}
+
+.overlay-content {
+  padding: 1rem;
+  max-width: 100%;
+}
+
+.overlay-content .card-title {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+.overlay-content .card-subtitle {
+  opacity: 0.85;
+}
+
+
+
