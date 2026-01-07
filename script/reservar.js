@@ -143,7 +143,7 @@ function mandarDatos() {
     familiar: numFamiliar.value,
     adultos: numAdultos.value,
     numNiños: numNiños.value,
-    numBebes: numNiños.value,
+    numBebes: numBebes.value,
     vip: numVip.value,
     servicios: obtenerServicios(),
     total: obtenerTotalFinal(),

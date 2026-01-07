@@ -32,9 +32,9 @@
     <h2 class="h2 text-primary text-center my-3 lh-sm text-uppercase fw-semibold">Mis Reservas</h2>
     <!-- ----------------------CARTAS DE RESERVAS -->
     <section id="mis-reservas" class="container-md">
-      <div class="row justify-content-center align-items-center g-2">
+      <div class="row justify-content-center align-items-center g-2" id="contenedor-reservas">
         <!-- -------Reserva 1 -->
-        <article class="col-12 col-md-4">
+        <article class="col-12 col-md-4" data-reserva-id="1">
           <div class="card border-success mb-3">
             <div class="card-header bg-transparent border-success title-mobile">Reserva #1</div>
             <div class="card-body text-success text-mobile">
@@ -80,14 +80,14 @@
             <div class="card-footer bg-transparent border-success">
               <div class="row gx-2">
                 <div class="col-12 col-md-4 d-flex justify-content-center mb-2 mb-md-0">
-                  <button type="button" class="btn btn-danger w-100" aria-label="Cancelar reserva">Cancelar</button>
+                  <a href="#contenedor-facturas"   class="btn btn-danger w-100 btn-cancelar" aria-label="Cancelar reserva">Cancelar</a>
                 </div>
                 <div class="col-12 col-md-4 d-flex justify-content-center mb-2 mb-md-0">
-                  <button type="button" class="btn btn-warning w-100" aria-label="Modificar reserva">Modificar</button>
+                  <a href="#contenedor-facturas"   class="btn btn-warning w-100" aria-label="Modificar reserva">Modificar</a>
                 </div>
                 <div class="col-12 col-md-4 d-flex justify-content-center">
-                  <button type="button" class="btn btn-info w-100" aria-label="Ver factura de reserva">Ver
-                    Factura</button>
+                  <a href="#contenedor-facturas"   class="btn btn-info w-100 btn-factura" aria-label="Ver factura de reserva">Ver
+                    Factura</a>
                 </div>
               </div>
             </div>
@@ -95,7 +95,7 @@
         </article>
 
         <!-- ---------------reserva 2 -->
-        <article class="col-12 col-md-4">
+        <article class="col-12 col-md-4" data-reserva-id="2">
           <div class="card border-success mb-3">
             <div class="card-header bg-transparent border-success title-mobile">Reserva #2</div>
             <div class="card-body text-success text-mobile">
@@ -141,14 +141,14 @@
             <div class="card-footer bg-transparent border-success">
               <div class="row gx-2">
                 <div class="col-12 col-md-4 d-flex justify-content-center mb-2 mb-md-0">
-                  <button type="button" class="btn btn-danger w-100" aria-label="Cancelar reserva">Cancelar</button>
+                  <a href="#contenedor-facturas"   class="btn btn-danger w-100 btn-cancelar" aria-label="Cancelar reserva">Cancelar</a>
                 </div>
                 <div class="col-12 col-md-4 d-flex justify-content-center mb-2 mb-md-0">
-                  <button type="button" class="btn btn-warning w-100" aria-label="Modificar reserva">Modificar</button>
+                  <a href="#contenedor-facturas"   class="btn btn-warning w-100" aria-label="Modificar reserva">Modificar</a>
                 </div>
                 <div class="col-12 col-md-4 d-flex justify-content-center">
-                  <button type="button" class="btn btn-info w-100" aria-label="Ver factura de reserva">Ver
-                    Factura</button>
+                  <a href="#contenedor-facturas"   class="btn btn-info w-100 btn-factura" aria-label="Ver factura de reserva">Ver
+                    Factura</a>
                 </div>
               </div>
             </div>
@@ -156,7 +156,7 @@
         </article>
 
         <!------------------ Reserva 3 -->
-        <article class="col-12 col-md-4">
+        <article class="col-12 col-md-4" data-reserva-id="3">
           <div class="card border-success mb-3">
             <div class="card-header bg-transparent border-success title-mobile">Reserva #3</div>
             <div class="card-body text-success text-mobile ">
@@ -202,14 +202,14 @@
             <div class="card-footer bg-transparent border-success">
               <div class="row gx-2">
                 <div class="col-12 col-md-4 d-flex justify-content-center mb-2 mb-md-0">
-                  <button type="button" class="btn btn-danger w-100" aria-label="Cancelar reserva">Cancelar</button>
+                  <a href="#contenedor-facturas"   class="btn btn-danger w-100 btn-cancelar" aria-label="Cancelar reserva">Cancelar</a>
                 </div>
                 <div class="col-12 col-md-4 d-flex justify-content-center mb-2 mb-md-0">
-                  <button type="button" class="btn btn-warning w-100" aria-label="Modificar reserva">Modificar</button>
+                  <a href="#contenedor-facturas"   class="btn btn-warning w-100" aria-label="Modificar reserva">Modificar</a>
                 </div>
                 <div class="col-12 col-md-4 d-flex justify-content-center">
-                  <button type="button" class="btn btn-info w-100" aria-label="Ver factura de reserva">Ver
-                    Factura</button>
+                  <a href="#contenedor-facturas"   class="btn btn-info w-100 btn-factura" aria-label="Ver factura de reserva">Ver
+                    Factura</a>
                 </div>
               </div>
             </div>
@@ -217,7 +217,7 @@
         </article>
 
         <!-- ----------------Reserva 4 -->
-        <article class="col-12 col-md-4">
+        <article class="col-12 col-md-4" data-reserva-id="4">
           <div class="card border-success mb-3">
             <div class="card-header bg-transparent border-success title-mobile">Reserva #4</div>
             <div class="card-body text-success text-mobile">
@@ -263,14 +263,14 @@
             <div class="card-footer bg-transparent border-success">
               <div class="row gx-2">
                 <div class="col-12 col-md-4 d-flex justify-content-center mb-2 mb-md-0">
-                  <button type="button" class="btn btn-danger w-100" aria-label="Cancelar reserva">Cancelar</button>
+                  <a href="#contenedor-facturas"   class="btn btn-danger w-100 btn-cancelar" aria-label="Cancelar reserva">Cancelar</a>
                 </div>
                 <div class="col-12 col-md-4 d-flex justify-content-center mb-2 mb-md-0">
-                  <button type="button" class="btn btn-warning w-100" aria-label="Modificar reserva">Modificar</button>
+                  <a href="#contenedor-facturas"   class="btn btn-warning w-100" aria-label="Modificar reserva">Modificar</a>
                 </div>
                 <div class="col-12 col-md-4 d-flex justify-content-center">
-                  <button type="button" class="btn btn-info w-100" aria-label="Ver factura de reserva">Ver
-                    Factura</button>
+                  <a href="#contenedor-facturas"   class="btn btn-info w-100 btn-factura" aria-label="Ver factura de reserva">Ver
+                    Factura</a>
                 </div>
               </div>
             </div>
@@ -278,7 +278,7 @@
         </article>
 
         <!-- ----------------reserva 5 -->
-        <article class="col-12 col-md-4">
+        <article class="col-12 col-md-4" data-reserva-id="5">
           <div class="card border-success mb-3">
             <div class="card-header bg-transparent border-success title-mobile">Reserva #5</div>
             <div class="card-body text-success text-mobile">
@@ -324,14 +324,14 @@
             <div class="card-footer bg-transparent border-success">
               <div class="row gx-2">
                 <div class="col-12 col-md-4 d-flex justify-content-center mb-2 mb-md-0">
-                  <button type="button" class="btn btn-danger w-100" aria-label="Cancelar reserva">Cancelar</button>
+                  <a href="#contenedor-facturas"   class="btn btn-danger w-100 btn-cancelar" aria-label="Cancelar reserva">Cancelar</a>
                 </div>
                 <div class="col-12 col-md-4 d-flex justify-content-center mb-2 mb-md-0">
-                  <button type="button" class="btn btn-warning w-100" aria-label="Modificar reserva">Modificar</button>
+                  <a href="#contenedor-facturas"   class="btn btn-warning w-100" aria-label="Modificar reserva">Modificar</a>
                 </div>
                 <div class="col-12 col-md-4 d-flex justify-content-center">
-                  <button type="button" class="btn btn-info w-100" aria-label="Ver factura de reserva">Ver
-                    Factura</button>
+                  <a href="#contenedor-facturas"   class="btn btn-info w-100 btn-factura" aria-label="Ver factura de reserva">Ver
+                    Factura</a>
                 </div>
               </div>
             </div>
@@ -340,7 +340,7 @@
 
 
         <!-- ------------Reserva 6 -->
-        <article class="col-12 col-md-4">
+        <article class="col-12 col-md-4" data-reserva-id="6">
           <div class="card border-success mb-3">
             <div class="card-header bg-transparent border-success title-mobile">Reserva #6</div>
             <div class="card-body text-success text-mobile">
@@ -386,14 +386,14 @@
             <div class="card-footer bg-transparent border-success">
               <div class="row gx-2">
                 <div class="col-12 col-md-4 d-flex justify-content-center mb-2 mb-md-0">
-                  <button type="button" class="btn btn-danger w-100" aria-label="Cancelar reserva">Cancelar</button>
+                  <a href="#contenedor-facturas"   class="btn btn-danger w-100 btn-cancelar" aria-label="Cancelar reserva">Cancelar</a>
                 </div>
                 <div class="col-12 col-md-4 d-flex justify-content-center mb-2 mb-md-0">
-                  <button type="button" class="btn btn-warning w-100" aria-label="Modificar reserva">Modificar</button>
+                  <a href="#contenedor-facturas"   class="btn btn-warning w-100" aria-label="Modificar reserva">Modificar</a>
                 </div>
                 <div class="col-12 col-md-4 d-flex justify-content-center">
-                  <button type="button" class="btn btn-info w-100" aria-label="Ver factura de reserva">Ver
-                    Factura</button>
+                  <a href="#contenedor-facturas"   class="btn btn-info w-100 btn-factura" aria-label="Ver factura de reserva">Ver
+                    Factura</a>
                 </div>
               </div>
             </div>
@@ -408,8 +408,8 @@
         <!-----------reservas activas -->
         <div class="col-12 col-md-4">
           <div class="p-3 border-secondary border rounded bg-body">
-            <h6 class="text-secondary mb-1">Total de reservas activas</h6>
-            <p class="h3  mb-0">3</p>
+            <h6 class="text-secondary mb-1">Total de reservas confirmadas</h6>
+            <p class="h3  mb-0" id="num-reservas-confirmadas">3</p>
           </div>
         </div>
 
@@ -417,7 +417,7 @@
         <div class="col-12 col-md-4">
           <div class="p-3 border-secondary border rounded bg-body">
             <h6 class="text-secondary mb-1">Total de reservas completadas</h6>
-            <p class="h3  mb-0">5</p>
+            <p class="h3  mb-0" id="num-reservas-completadas">5</p>
           </div>
         </div>
 
@@ -425,91 +425,17 @@
         <div class="col-12 col-md-4">
           <div class="p-3 border-secondary border rounded bg-body">
             <h6 class="text-secondary mb-1">Próximo check-in</h6>
-            <p class="h3 text-info mb-0"><time datetime="2026-01-10T15:00">2026-01-10 15:00</time></p>
+            <p class="h3 text-info mb-0" id="proximo-chech-in"><time datetime="2026-01-10T15:00">2026-01-10 15:00</time></p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- --------------FACTURA DE RESERVA #1 -->
-    <article class="col-12 col-md-8 mx-auto">
-      <div class="card border-success mb-4">
-        <!-- Encabezado -->
-        <div class="card-header bg-transparent border-success">
-          <h4 class="mb-0 text-primary">Comprobante de Reserva #001</h4>
-        </div>
-
-        <div class="card-body">
-          <!-- Datos del hotel -->
-          <section class="mb-4">
-            <h5 class="text-secondary">Aurora Hotel</h5>
-            <address class="mb-0">
-              Quito, Ecuador<br>
-              Retamas 117 y Pablo Casals<br>
-              Tel: <a href="tel:+34600000000">+34 600 000 000</a><br>
-              Email: <a href="mailto:contacto@aurorahotel.com">contacto@aurorahotel.com</a>
-            </address>
-          </section>
-          <hr> <!-- linea horizontal -->
-          <!-- Datos de la reserva -->
-          <section class="mb-4">
-            <h5 class="text-secondary">Datos de la reserva</h5>
-            <dl class="list-group list-group-flush">
-              <dt class="list-group-item">Fecha de entrada</dt>
-              <dd class="list-group-item">
-                <time datetime="2026-01-10T15:00">2026-01-10 15:00</time>
-              </dd>
-
-              <dt class="list-group-item">Fecha de salida</dt>
-              <dd class="list-group-item">
-                <time datetime="2026-01-12T11:00">2026-01-12 11:00</time>
-              </dd>
-
-              <dt class="list-group-item">Número de huéspedes</dt>
-              <dd class="list-group-item">2 adultos, 1 niño, 0 bebés</dd>
-
-              <dt class="list-group-item">Tipo de habitación</dt>
-              <dd class="list-group-item">1 Estándar</dd>
-
-              <dt class="list-group-item">Servicios adicionales</dt>
-              <dd class="list-group-item">Desayuno incluido, Acceso a spa</dd>
-            </dl>
-          </section>
-
-          <hr>
-
-          <!-- Precio -->
-          <section>
-            <h5 class="text-secondary">Detalle de precios</h5>
-
-            <ul class="list-group list-group-flush mb-3">
-              <li class="list-group-item d-flex justify-content-between">
-                <span>Habitación (x noches)</span>
-                <span>$140</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between">
-                <span>Servicios adicionales</span>
-                <span>$40</span>
-              </li>
-              <li class="list-group-item d-flex justify-content-between fw-bold">
-                <span>Total estimado</span>
-                <span>$180</span>
-              </li>
-            </ul>
-
-            <p class="mb-0">
-              <strong>Estado de la reserva:</strong>
-              <span class="text-success">Confirmada</span>
-            </p>
-          </section>
-        </div>
-
-        <!-- Footer -->
-        <div class="card-footer bg-transparent border-success text-end">
-          <small class="text-muted">Este comprobante es válido como referencia de reserva.</small>
-        </div>
-      </div>
-    </article>
+    <!-- contenedor facturas -->
+    <section id="contenedor-facturas" class="container-md">
+      
+    </section>
+   
 
 
   </main>
@@ -519,7 +445,7 @@
   <!-- SCRIPT Bootstrap  -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- SCRIPT PERSONAL-->
-  <script src="script/plantilla.js"></script>
+   <script src="script/misReservas.js"></script>
   <script src="script/app.js"></script>
 </body>
 
