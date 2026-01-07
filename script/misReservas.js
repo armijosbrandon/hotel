@@ -296,9 +296,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     //limpiamos sessionStorage para que no se repita al recargar
     sessionStorage.removeItem("reserva");
-
-    /* cartas con datos utiles */
+  }
+      /* cartas con datos utiles */
     calcularReservasComfirmadas();
     calcularReservasCompletadas();
-  }
 });
