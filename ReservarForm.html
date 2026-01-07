@@ -31,20 +31,20 @@
     <!-- TITULO DE PAGINA -->
     <h2 class="text-primary h2 text-center fw-semibold my-4 lh-sm text-uppercase"> Sistema de Reservación</h2>
     <!-- FORMULARIO DE RESERVA -->
-    <section class="container my-3 card shadow" id="formulario-reserva">
+    <section class="container my-3 card shadow" id="formulario-reserva-contenedor">
       <div class="card-body">
         <h3 class="card-title text-primary h3 mb-4 text-secondary" id="titulo-formulario">Formulario de Reserva</h3>
-        <form aria-labelledby="titulo-formulario">
+        <form aria-labelledby="titulo-formulario" id="formulario-reserva">
           <!-- Horarios -->
           <h5 class="mb-3">Horarios</h5>
           <div class="row mb-3">
             <div class="col-md-6">
               <label class="form-label">Fecha y hora de entrada</label>
-              <input type="datetime-local" class="form-control" required>
+              <input name="entrada" type="datetime-local" class="form-control" required>
             </div>
             <div class="col-md-6">
               <label class="form-label">Fecha y hora de salida</label>
-              <input type="datetime-local" class="form-control" required>
+              <input name="salida" type="datetime-local" class="form-control" required>
             </div>
           </div>
 
@@ -53,15 +53,15 @@
           <div class="row mb-3">
             <div class="col-md-4">
               <label class="form-label">Adultos</label>
-              <input type="number" class="form-control" min="1" value="1">
+              <input name="numAdultos" type="number" class="form-control" min="1" value="1">
             </div>
             <div class="col-md-4">
               <label class="form-label">Niños</label>
-              <input type="number" class="form-control" min="0" value="0">
+              <input name="numNiños" type="number" class="form-control" min="0" value="0">
             </div>
             <div class="col-md-4">
-              <label class="form-label">Bebés</label>
-              <input type="number" class="form-control" min="0" value="0">
+              <label class="form-label">Bebés <small class="text-muted"> (Sujetos a disponibilidad de cunas)</small></label>
+              <input name="numBebes" type="number" class="form-control" min="0" value="0">
             </div>
           </div>
 
@@ -71,24 +71,25 @@
           <div class="row mb-3">
             <div class="col-md-3">
               <label class="form-label">Estándar</label>
-              <input type="number" class="form-control" min="0" value="0" required>
+              <input name="numEstandar" type="number" class="form-control" min="0" value="0" required>
             </div>
             <div class="col-md-3">
               <label class="form-label">Superior</label>
-              <input type="number" class="form-control" min="0" value="0" required>
+              <input name="numSuperior" type="number" class="form-control" min="0" value="0" required>
             </div>
             <div class="col-md-3">
               <label class="form-label">Familiar</label>
-              <input type="number" class="form-control" min="0" value="0" required>
+              <input name="numFamiliar" type="number" class="form-control" min="0" value="0" required>
             </div>
             <div class="col-md-3">
               <label class="form-label">Suite VIP</label>
-              <input type="number" class="form-control" min="0" value="0" required>
+              <input name="numVip" type="number" class="form-control" min="0" value="0" required>
             </div>
           </div>
 
           <!-- Servicios con costo adicional -->
-          <h5 class="mb-3">Servicios adicionales (con costo)</h5>
+          <h5 class="mb-3">Servicios adicionales</h5>
+          <p class="text-muted">El precio final será confirmado por el hotel según disponibilidad y servicios efectivamente consumidos.</p>
           <div class="row mb-3">
             <div class="col-md-6">
               <div class="form-check mb-2">
@@ -147,8 +148,8 @@
 
           <!-- Precio estimado -->
           <div class="alert alert-info mt-4">
-            <strong>Precio estimado:</strong><br>
-            El precio final se confirmará al completar la reserva.
+            <strong id="precio-estimado">Precio estimado:</strong><br>
+            El precio final se confirmará al completar su instancia segun los servicios recibidos.
           </div>
 
           <!-- Mensaje de sesión -->
@@ -156,9 +157,12 @@
             Debes iniciar sesión para finalizar la reserva.
           </div>
 
+          <!-- NOTIFICACION PARA CUANDO NO SE SELECCIONA NINGUNA HABITACION -->
+          <div id="notificacion"></div>
+
           <!-- Botón -->
           <div class="d-grid">
-            <button type="submit" class="btn btn-primary btn-lg">
+            <button name="btnReserva" type="submit" class="btn btn-primary btn-lg">
               Reservar
             </button>
           </div>
@@ -573,8 +577,8 @@
   <!-- SCRIPT Bootstrap  -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
   <!-- SCRIPT PERSONAL-->
-  <script src="script/plantilla.js"></script>
   <script src="script/app.js"></script>
+  <script src="script/reservar.js"></script>
 </body>
 
 </html>
