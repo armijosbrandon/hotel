@@ -1,0 +1,29 @@
+.accordion-collapse {
+  position: static !important;
+  top: auto !important;
+  left: auto !important;
+  width: auto !important;
+
+  opacity: 1 !important;
+  transform: none !important;
+  pointer-events: auto !important;
+
+  transition: height .35s ease !important;
+
+  z-index: auto !important;
+  background: transparent !important;
+
+  display: block !important;
+  height: 0 !important;
+  overflow: hidden !important;
+}
+
+.accordion-collapse.show {
+  height: auto !important;
+}
+
+.accordion-collapse.collapsing {
+  height: 0 !important;
+  overflow: hidden !important;
+  transition: height .35s ease !important;
+}

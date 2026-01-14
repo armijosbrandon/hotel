@@ -510,11 +510,9 @@ footer a:hover { /* linea de pestaña activa, after hace que se inserte despues 
   --bs-accordion-bg: var(--color-light) !important;
   --bs-accordion-border-color: var(--color-light) !important;
   --bs-accordion-border-width: 1px !important;
-}
-
-.accordion {
   position: relative !important;
 }
+
 
 .accordion-collapse {
   position: absolute !important;
