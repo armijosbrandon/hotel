@@ -96,7 +96,7 @@ nav ul {
 }
 
 nav a {
-  color: var(--color-light);
+  color: var(--color-light) !important;
   text-decoration: none;
   position: relative; /* necesario para pseudo-elemento */
   padding-bottom: 5px; /* espacio para la línea */
@@ -466,7 +466,7 @@ footer a:hover { /* linea de pestaña activa, after hace que se inserte despues 
 /* NAVEGACION Y LINKS */
 /* NAV LINKS BASADOS EN PALETA */
 .nav-link {
-  color: var(--color-text) !important; /* color por defecto */
+  color: var(--color-light) !important; /* color por defecto */
 }
 
 .nav-link:hover {
