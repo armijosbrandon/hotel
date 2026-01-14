@@ -67,7 +67,7 @@ function renderReserva(datos, contenedor, numeroReserva) {
 
   /* codigo html html */
   article.innerHTML = `
-    <div class="card border-success mb-3">
+    <div class="card card-animada border-success mb-3">
       <div class="card-header bg-transparent border-success">
         Reserva #${numeroReserva}
       </div>

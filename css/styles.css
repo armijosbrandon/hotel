@@ -48,6 +48,7 @@ body.menu-open {
   width: 100%;
 }
 
+
 /* ---BARRA BLANCA SUPERIOR ----*/
 .utility-bar {
   background-color: var(--color-light);
@@ -201,6 +202,22 @@ footer a:hover { /* linea de pestaña activa, after hace que se inserte despues 
 
 }
 
+/* ESTILIZACION EXTRA */
+/* animaciones */
+.card-animada{
+  transition: transform 0.3s ease ;
+}
+.card-animada:hover{
+  transform: scale(1.05);
+}
+.card-animada .fa-solid{
+  transition: transform 0.5s ease ;
+}
+
+.card-animada:hover .fa-solid{
+  transform: rotate(20deg) !important;
+}
+
 /* estilo de tamaño de fuente para moviles */
 @media (max-width: 768px) {
   .title-mobile {
@@ -214,10 +231,6 @@ footer a:hover { /* linea de pestaña activa, after hace que se inserte despues 
   }
 }
 /* puntos de quiebre mobile first */
-/* Teléfonos grandes */
-@media (min-width: 576px) {
-  
-}
 
 /* Tablets */
 @media (min-width: 768px) {
@@ -233,10 +246,6 @@ footer a:hover { /* linea de pestaña activa, after hace que se inserte despues 
   }
 }
 
-
-/* Pantallas grandes */
-@media (min-width: 1200px) {
-}
 
 
 /* -------------BOOTSTRAP PERSONALIZADO */
