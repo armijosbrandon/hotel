@@ -466,7 +466,11 @@ footer a:hover { /* linea de pestaña activa, after hace que se inserte despues 
 /* NAVEGACION Y LINKS */
 /* NAV LINKS BASADOS EN PALETA */
 .nav-link {
+<<<<<<< HEAD
   color: var(--color-light) !important; /* color por defecto */
+=======
+  color: var(--color-text) !important; /* color por defecto */
+>>>>>>> main
 }
 
 .nav-link:hover {
@@ -510,9 +514,17 @@ footer a:hover { /* linea de pestaña activa, after hace que se inserte despues 
   --bs-accordion-bg: var(--color-light) !important;
   --bs-accordion-border-color: var(--color-light) !important;
   --bs-accordion-border-width: 1px !important;
+<<<<<<< HEAD
   position: relative !important;
 }
 
+=======
+}
+
+.accordion {
+  position: relative !important;
+}
+>>>>>>> main
 
 .accordion-collapse {
   position: absolute !important;
