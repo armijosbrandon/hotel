@@ -125,9 +125,6 @@ function renderReserva(datos, contenedor, numeroReserva) {
           <div class="col-12 col-md-4 mb-2">
             <button class="btn btn-danger w-100 btn-cancelar">Cancelar</button>
           </div>
-          <div class="col-12 col-md-4 mb-2">
-            <button class="btn btn-warning w-100">Modificar</button>
-          </div>
           <div class="col-12 col-md-4">
             <button class="btn btn-info w-100 btn-factura">Ver factura</button>
           </div>
